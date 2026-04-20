@@ -3,146 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Style Product</title>
+    <title>第一小组 - 艺术与科技</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo"> Product</a>
+            <a href="#" class="nav-logo">第一小组</a>
             <ul class="nav-menu">
                 <li><a href="#home">首页</a></li>
-                <li><a href="#products">产品</a></li>
-                <li><a href="#features">特点</a></li>
-                <li><a href="#contact">联系</a></li>
+                <li><a href="#members">小组成员</a></li>
+                <li><a href="#submit">提交作业</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- 首屏 Banner -->
     <section class="hero" id="home">
-        <h1>ProBook Air</h1>
-        <p>轻得惊人，强得非凡!!!!!。</p>
+        <h1>第一小组</h1>
+        <p>艺术与科技专业</p>
         <div class="hero-buttons">
-            <a href="#products" class="btn btn-primary">立即购买</a>
-            <a href="#features" class="btn btn-secondary">了解更多</a>
+            <a href="#members" class="btn btn-primary">查看成员</a>
+            <a href="#submit" class="btn btn-secondary">提交作业</a>
         </div>
     </section>
 
-    <!-- 产品卡片模块 -->
-    <section class="products" id="products">
-        <h2 class="section-title fade-in">选择你的型号</h2>
-        <p class="section-subtitle fade-in">专为不同需求打造的专业工具</p>
+    <!-- 小组成员介绍 -->
+    <section class="members" id="members">
+        <h2 class="section-title fade-in">小组成员</h2>
+        <p class="section-subtitle fade-in">艺术与科技专业 · 四人团队</p>
         
-        <div class="product-grid">
-            <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&h=400&fit=crop" alt="MacBook" class="product-image">
-                <h3 class="product-name">ProBook Air</h3>
-                <p class="product-desc">轻薄便携，日常办公的理想之选</p>
-                <p class="product-price">¥ 8,999 起</p>
+        <div class="member-grid">
+            <div class="member-card fade-in">
+                <div class="member-avatar">
+                    <span class="avatar-icon">👤</span>
+                </div>
+                <h3 class="member-name">陈过</h3>
+                <p class="member-id">学号：2024014742</p>
+                <p class="member-major">艺术与科技专业</p>
             </div>
 
-            <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop" alt="MacBook Pro" class="product-image">
-                <h3 class="product-name">ProBook Pro</h3>
-                <p class="product-desc">性能猛兽，专业创作的强大伙伴</p>
-                <p class="product-price">¥ 12,999 起</p>
+            <div class="member-card fade-in">
+                <div class="member-avatar">
+                    <span class="avatar-icon">👤</span>
+                </div>
+                <h3 class="member-name">蔡奥秘</h3>
+                <p class="member-id">学号：2024014745</p>
+                <p class="member-major">艺术与科技专业</p>
             </div>
 
-            <div class="product-card fade-in">
-                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&h=400&fit=crop" alt="iPad" class="product-image">
-                <h3 class="product-name">Pad Pro</h3>
-                <p class="product-desc">触控未来，创意无限</p>
-                <p class="product-price">¥ 6,499 起</p>
+            <div class="member-card fade-in">
+                <div class="member-avatar">
+                    <span class="avatar-icon">👤</span>
+                </div>
+                <h3 class="member-name">蔡仪彤</h3>
+                <p class="member-id">学号：2024014735</p>
+                <p class="member-major">艺术与科技专业</p>
+            </div>
+
+            <div class="member-card fade-in">
+                <div class="member-avatar">
+                    <span class="avatar-icon">👤</span>
+                </div>
+                <h3 class="member-name">王昱涵</h3>
+                <p class="member-id">学号：2024014747</p>
+                <p class="member-major">艺术与科技专业</p>
             </div>
         </div>
     </section>
 
-    <!-- 特点介绍 -->
-    <section class="features" id="features">
-        <h2 class="section-title fade-in">为什么选择我们</h2>
-        <p class="section-subtitle fade-in">重新定义可能的边界</p>
+    <!-- 作业提交部分 -->
+    <section class="submit-section" id="submit">
+        <h2 class="section-title fade-in">提交作业</h2>
+        <p class="section-subtitle fade-in">上传文件，系统将自动创建文件夹</p>
         
-        <div class="feature-grid">
-            <div class="feature-item fade-in">
-                <span class="feature-icon">⚡</span>
-                <h3 class="feature-title">极速性能</h3>
-                <p class="feature-text">搭载最新一代处理器，提供前所未有的运算速度，让创意不受等待的束缚。</p>
+        <div class="upload-container fade-in">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📁</div>
+                <h3>拖拽文件到此处或点击上传</h3>
+                <p>支持多种文件格式</p>
+                <input type="file" id="fileInput" multiple style="display: none;">
+                <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">选择文件</button>
+            </div>
+            
+            <div class="upload-options">
+                <div class="form-group">
+                    <label for="folderName">文件夹名称：</label>
+                    <input type="text" id="folderName" placeholder="输入文件夹名称（可选）">
+                </div>
+                <div class="form-group">
+                    <label for="studentSelect">选择成员：</label>
+                    <select id="studentSelect">
+                        <option value="">请选择成员</option>
+                        <option value="陈过_2024014742">陈过 (2024014742)</option>
+                        <option value="蔡奥秘_2024014745">蔡奥秘 (2024014745)</option>
+                        <option value="蔡仪彤_2024014735">蔡仪彤 (2024014735)</option>
+                        <option value="王昱涵_2024014747">王昱涵 (2024014747)</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" id="uploadBtn" onclick="handleUpload()">上传文件</button>
             </div>
 
-            <div class="feature-item fade-in">
-                <span class="feature-icon">🔋</span>
-                <h3 class="feature-title">全天续航</h3>
-                <p class="feature-text">优化的能效管理，单次充电即可满足一整天的使用需求，从早到晚不间断。</p>
-            </div>
-
-            <div class="feature-item fade-in">
-                <span class="feature-icon">🎨</span>
-                <h3 class="feature-title">惊艳显示</h3>
-                <p class="feature-text">Retina 级显示屏，呈现数十亿色彩，每一处细节都栩栩如生。</p>
-            </div>
-
-            <div class="feature-item fade-in">
-                <span class="feature-icon">🛡️</span>
-                <h3 class="feature-title">安全可靠</h3>
-                <p class="feature-text">先进的安全芯片和生物识别技术，保护你的数据隐私安全无虞。</p>
+            <div class="file-list" id="fileList">
+                <h4>已选择的文件：</h4>
+                <ul id="selectedFiles"></ul>
             </div>
         </div>
     </section>
 
     <!-- 页脚 -->
-    <footer class="footer" id="contact">
+    <footer class="footer">
         <div class="footer-content">
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h4>产品</h4>
-                    <ul>
-                        <li><a href="#">ProBook Air</a></li>
-                        <li><a href="#">ProBook Pro</a></li>
-                        <li><a href="#">Pad Pro</a></li>
-                        <li><a href="#">配件</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>服务</h4>
-                    <ul>
-                        <li><a href="#">技术支持</a></li>
-                        <li><a href="#">保修服务</a></li>
-                        <li><a href="#">以旧换新</a></li>
-                        <li><a href="#">企业采购</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>关于</h4>
-                    <ul>
-                        <li><a href="#">公司简介</a></li>
-                        <li><a href="#">新闻中心</a></li>
-                        <li><a href="#">加入我们</a></li>
-                        <li><a href="#">投资者关系</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>联系</h4>
-                    <ul>
-                        <li><a href="#">在线客服</a></li>
-                        <li><a href="#">电话咨询</a></li>
-                        <li><a href="#">门店查询</a></li>
-                        <li><a href="#">社交媒体</a></li>
-                    </ul>
-                </div>
-            </div>
-
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2026 Product Inc. 保留所有权利.</p>
-                <div class="footer-social">
-                    <a href="#">微博</a>
-                    <a href="#">微信</a>
-                    <a href="#">抖音</a>
-                </div>
+                <p class="footer-copyright">© 2026 第一小组 - 艺术与科技专业. 保留所有权利.</p>
             </div>
         </div>
     </footer>
@@ -190,20 +164,104 @@
             observer.observe(el);
         });
 
-        // 产品卡片悬停微动效增强
-        document.querySelectorAll('.product-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                card.style.background = `radial-gradient(circle at ${x}px ${y}px, #ffffff, #f5f5f7)`;
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.background = '#f5f5f7';
-            });
+        // 文件上传功能
+        const fileInput = document.getElementById('fileInput');
+        const uploadArea = document.getElementById('uploadArea');
+        const selectedFiles = document.getElementById('selectedFiles');
+        let filesToUpload = [];
+
+        // 拖拽上传
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = '#0071e3';
+            uploadArea.style.background = 'rgba(0, 113, 227, 0.05)';
         });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.style.borderColor = '#ddd';
+            uploadArea.style.background = '#f9f9f9';
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = '#ddd';
+            uploadArea.style.background = '#f9f9f9';
+            
+            const files = Array.from(e.dataTransfer.files);
+            addFiles(files);
+        });
+
+        // 文件选择
+        fileInput.addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            addFiles(files);
+        });
+
+        function addFiles(files) {
+            filesToUpload = [...filesToUpload, ...files];
+            updateFileList();
+        }
+
+        function updateFileList() {
+            selectedFiles.innerHTML = '';
+            filesToUpload.forEach((file, index) => {
+                const li = document.createElement('li');
+                li.className = 'file-item';
+                li.innerHTML = `
+                    <span>${file.name} (${formatFileSize(file.size)})</span>
+                    <button onclick="removeFile(${index})" class="remove-btn">×</button>
+                `;
+                selectedFiles.appendChild(li);
+            });
+        }
+
+        function removeFile(index) {
+            filesToUpload.splice(index, 1);
+            updateFileList();
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+        }
+
+        // 处理上传
+        function handleUpload() {
+            const folderName = document.getElementById('folderName').value;
+            const studentSelect = document.getElementById('studentSelect').value;
+
+            if (filesToUpload.length === 0) {
+                alert('请先选择要上传的文件！');
+                return;
+            }
+
+            if (!studentSelect) {
+                alert('请选择成员！');
+                return;
+            }
+
+            // 生成文件夹名称
+            const timestamp = new Date().getTime();
+            const finalFolderName = folderName || `${studentSelect}_${timestamp}`;
+
+            // 模拟上传过程
+            console.log('正在上传文件...');
+            console.log('文件夹名称:', finalFolderName);
+            console.log('文件列表:', filesToUpload.map(f => f.name));
+
+            // 显示成功消息
+            alert(`文件上传成功！\n\n文件夹：${finalFolderName}\n文件数量：${filesToUpload.length}个`);
+
+            // 清空表单
+            filesToUpload = [];
+            updateFileList();
+            document.getElementById('folderName').value = '';
+            document.getElementById('studentSelect').value = '';
+            fileInput.value = '';
+        }
     </script>
 </body>
 </html>
