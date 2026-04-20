@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>这是啥组 - Home</title>
+    <title>这是啥组 - Team Members</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌈</text></svg>">
     <link rel="stylesheet" href="style-new.css">
 </head>
@@ -13,8 +13,8 @@
         <div class="nav-container">
             <a href="index.html" class="nav-logo">这是啥组</a>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="team.html">Team Members</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html" class="active">Team Members</a></li>
                 <li><a href="homework.html">Daily Homework</a></li>
                 <li><a href="final-work.html">Final Work</a></li>
             </ul>
@@ -24,46 +24,40 @@
     <!-- 主内容 -->
     <main class="main-content">
         <div class="container">
-            <!-- Hero 区域 -->
-            <div class="hero fade-in">
-                <h1>这是啥组</h1>
-                <p>浙江万里学院 · 艺术与科技专业</p>
-                <div class="hero-buttons">
-                    <a href="team.html" class="btn btn-primary">查看团队成员</a>
-                    <a href="final-work.html" class="btn btn-secondary">查看最终作品</a>
-                </div>
+            <!-- 页面标题 -->
+            <div class="page-title fade-in">
+                <h1>团队成员</h1>
+                <p>认识我们充满活力的创作团队</p>
             </div>
 
-            <!-- 团队简介 -->
-            <div class="page-title fade-in" style="animation-delay: 0.2s;">
-                <h1>关于我们</h1>
-                <p>我们是一个充满活力和创造力的团队，来自浙江万里学院艺术与科技专业</p>
-            </div>
-
-            <!-- 团队成员预览 -->
+            <!-- 团队成员网格 -->
             <div class="team-grid">
-                <a href="member-wangyuhan.html" class="team-card fade-in" style="animation-delay: 0.3s;">
+                <a href="member-wangyuhan.html" class="team-card fade-in" style="animation-delay: 0.1s;">
                     <img src="memoji.png" alt="王昱涵" class="team-avatar">
                     <h3 class="team-name">王昱涵</h3>
                     <p class="team-info">学号: 2024014747</p>
+                    <p class="team-info">浙江万里学院 · 艺术与科技</p>
                 </a>
 
-                <a href="member-chenguo.html" class="team-card fade-in" style="animation-delay: 0.4s;">
+                <a href="member-chenguo.html" class="team-card fade-in" style="animation-delay: 0.2s;">
                     <img src="memoji (1).png" alt="陈过" class="team-avatar">
                     <h3 class="team-name">陈过</h3>
                     <p class="team-info">学号: 2024014742</p>
+                    <p class="team-info">浙江万里学院 · 艺术与科技</p>
                 </a>
 
-                <a href="member-caiyitong.html" class="team-card fade-in" style="animation-delay: 0.5s;">
+                <a href="member-caiyitong.html" class="team-card fade-in" style="animation-delay: 0.3s;">
                     <img src="memoji (2).png" alt="蔡仪彤" class="team-avatar">
                     <h3 class="team-name">蔡仪彤</h3>
                     <p class="team-info">学号: 2024014735</p>
+                    <p class="team-info">浙江万里学院 · 艺术与科技</p>
                 </a>
 
-                <a href="member-caiaomi.html" class="team-card fade-in" style="animation-delay: 0.6s;">
+                <a href="member-caiaomi.html" class="team-card fade-in" style="animation-delay: 0.4s;">
                     <img src="memoji (3).png" alt="蔡奥秘" class="team-avatar">
                     <h3 class="team-name">蔡奥秘</h3>
                     <p class="team-info">学号: 2024014745</p>
+                    <p class="team-info">浙江万里学院 · 艺术与科技</p>
                 </a>
             </div>
         </div>
@@ -75,7 +69,6 @@
     </footer>
 
     <script>
-        // 添加导航栏滚动效果
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
