@@ -3,24 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>这是啥组 - Home</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌈</text></svg>">
     <link rel="stylesheet" href="style-new.css">
+=======
+    <title>第一小组 - 艺术与科技</title>
+    <link rel="stylesheet" href="style.css">
+>>>>>>> 794ef22ee7bf1b062ad18bdb8879ce2f600ca955
 </head>
 <body>
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
+<<<<<<< HEAD
             <a href="index.html" class="nav-logo">这是啥组</a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="team.html">Team Members</a></li>
                 <li><a href="homework.html">Daily Homework</a></li>
                 <li><a href="final-work.html">Final Work</a></li>
+=======
+            <a href="#" class="nav-logo">第一小组</a>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#members">小组成员</a></li>
+                <li><a href="#submit">提交作业</a></li>
+>>>>>>> 794ef22ee7bf1b062ad18bdb8879ce2f600ca955
             </ul>
         </div>
     </nav>
 
+<<<<<<< HEAD
     <!-- 主内容 -->
     <main class="main-content">
         <div class="container">
@@ -72,6 +86,108 @@
     <!-- 页脚 -->
     <footer class="footer">
         <p>© 2024 这是啥组 · 浙江万里学院 · 艺术与科技专业</p>
+=======
+    <!-- 首屏 Banner -->
+    <section class="hero" id="home">
+        <h1>第一小组</h1>
+        <p>艺术与科技专业</p>
+        <div class="hero-buttons">
+            <a href="#members" class="btn btn-primary">查看成员</a>
+            <a href="#submit" class="btn btn-secondary">提交作业</a>
+        </div>
+    </section>
+
+    <!-- 小组成员介绍 -->
+    <section class="members" id="members">
+        <h2 class="section-title fade-in">小组成员</h2>
+        <p class="section-subtitle fade-in">艺术与科技专业 · 四人团队</p>
+        
+        <div class="member-grid">
+            <div class="member-card fade-in">
+                <div class="member-avatar">
+                    <span class="avatar-icon">👤</span>
+                </div>
+                <h3 class="member-name">陈过</h3>
+                <p class="member-id">学号：2024014742</p>
+                <p class="member-major">艺术与科技专业</p>
+            </div>
+
+            <div class="member-card fade-in">
+                <div class="member-avatar">
+                    <span class="avatar-icon">👤</span>
+                </div>
+                <h3 class="member-name">蔡奥秘</h3>
+                <p class="member-id">学号：2024014745</p>
+                <p class="member-major">艺术与科技专业</p>
+            </div>
+
+            <div class="member-card fade-in">
+                <div class="member-avatar">
+                    <span class="avatar-icon">👤</span>
+                </div>
+                <h3 class="member-name">蔡仪彤</h3>
+                <p class="member-id">学号：2024014735</p>
+                <p class="member-major">艺术与科技专业</p>
+            </div>
+
+            <div class="member-card fade-in">
+                <div class="member-avatar">
+                    <span class="avatar-icon">👤</span>
+                </div>
+                <h3 class="member-name">王昱涵</h3>
+                <p class="member-id">学号：2024014747</p>
+                <p class="member-major">艺术与科技专业</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作业提交部分 -->
+    <section class="submit-section" id="submit">
+        <h2 class="section-title fade-in">提交作业</h2>
+        <p class="section-subtitle fade-in">上传文件，系统将自动创建文件夹</p>
+        
+        <div class="upload-container fade-in">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📁</div>
+                <h3>拖拽文件到此处或点击上传</h3>
+                <p>支持多种文件格式</p>
+                <input type="file" id="fileInput" multiple style="display: none;">
+                <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">选择文件</button>
+            </div>
+            
+            <div class="upload-options">
+                <div class="form-group">
+                    <label for="folderName">文件夹名称：</label>
+                    <input type="text" id="folderName" placeholder="输入文件夹名称（可选）">
+                </div>
+                <div class="form-group">
+                    <label for="studentSelect">选择成员：</label>
+                    <select id="studentSelect">
+                        <option value="">请选择成员</option>
+                        <option value="陈过_2024014742">陈过 (2024014742)</option>
+                        <option value="蔡奥秘_2024014745">蔡奥秘 (2024014745)</option>
+                        <option value="蔡仪彤_2024014735">蔡仪彤 (2024014735)</option>
+                        <option value="王昱涵_2024014747">王昱涵 (2024014747)</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" id="uploadBtn" onclick="handleUpload()">上传文件</button>
+            </div>
+
+            <div class="file-list" id="fileList">
+                <h4>已选择的文件：</h4>
+                <ul id="selectedFiles"></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 第一小组 - 艺术与科技专业. 保留所有权利.</p>
+            </div>
+        </div>
+>>>>>>> 794ef22ee7bf1b062ad18bdb8879ce2f600ca955
     </footer>
 
     <script>
@@ -84,6 +200,126 @@
                 navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
             }
         });
+<<<<<<< HEAD
+=======
+
+        // 淡入动画（滚动触发）
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 文件上传功能
+        const fileInput = document.getElementById('fileInput');
+        const uploadArea = document.getElementById('uploadArea');
+        const selectedFiles = document.getElementById('selectedFiles');
+        let filesToUpload = [];
+
+        // 拖拽上传
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = '#0071e3';
+            uploadArea.style.background = 'rgba(0, 113, 227, 0.05)';
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.style.borderColor = '#ddd';
+            uploadArea.style.background = '#f9f9f9';
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = '#ddd';
+            uploadArea.style.background = '#f9f9f9';
+            
+            const files = Array.from(e.dataTransfer.files);
+            addFiles(files);
+        });
+
+        // 文件选择
+        fileInput.addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            addFiles(files);
+        });
+
+        function addFiles(files) {
+            filesToUpload = [...filesToUpload, ...files];
+            updateFileList();
+        }
+
+        function updateFileList() {
+            selectedFiles.innerHTML = '';
+            filesToUpload.forEach((file, index) => {
+                const li = document.createElement('li');
+                li.className = 'file-item';
+                li.innerHTML = `
+                    <span>${file.name} (${formatFileSize(file.size)})</span>
+                    <button onclick="removeFile(${index})" class="remove-btn">×</button>
+                `;
+                selectedFiles.appendChild(li);
+            });
+        }
+
+        function removeFile(index) {
+            filesToUpload.splice(index, 1);
+            updateFileList();
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+        }
+
+        // 处理上传
+        function handleUpload() {
+            const folderName = document.getElementById('folderName').value;
+            const studentSelect = document.getElementById('studentSelect').value;
+
+            if (filesToUpload.length === 0) {
+                alert('请先选择要上传的文件！');
+                return;
+            }
+
+            if (!studentSelect) {
+                alert('请选择成员！');
+                return;
+            }
+
+            // 生成文件夹名称
+            const timestamp = new Date().getTime();
+            const finalFolderName = folderName || `${studentSelect}_${timestamp}`;
+
+            // 模拟上传过程
+            console.log('正在上传文件...');
+            console.log('文件夹名称:', finalFolderName);
+            console.log('文件列表:', filesToUpload.map(f => f.name));
+
+            // 显示成功消息
+            alert(`文件上传成功！\n\n文件夹：${finalFolderName}\n文件数量：${filesToUpload.length}个`);
+
+            // 清空表单
+            filesToUpload = [];
+            updateFileList();
+            document.getElementById('folderName').value = '';
+            document.getElementById('studentSelect').value = '';
+            fileInput.value = '';
+        }
+>>>>>>> 794ef22ee7bf1b062ad18bdb8879ce2f600ca955
     </script>
 </body>
 </html>
