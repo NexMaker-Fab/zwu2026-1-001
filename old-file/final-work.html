@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是啥组 - Final Work</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌈</text></svg>">
+    <link rel="stylesheet" href="style-new.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">这是啥组</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team Members</a></li>
+                <li><a href="homework.html">Daily Homework</a></li>
+                <li><a href="final-work.html" class="active">Final Work</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="main-content">
+        <div class="container">
+            <!-- 页面标题 -->
+            <div class="page-title fade-in">
+                <h1>最终作品</h1>
+                <p>我们的创意结晶与成果展示</p>
+            </div>
+
+            <!-- 方案部分 -->
+            <div class="final-work-section fade-in" style="animation-delay: 0.1s;">
+                <h2>📋 方案</h2>
+                <div class="work-content">
+                    <h3>项目名称：创意艺术装置</h3>
+                    <p>本项目旨在通过艺术与科技的融合，创造一个互动性的艺术装置，探索人与艺术、科技之间的关系。</p>
+                    <p><strong>设计理念：</strong></p>
+                    <ul>
+                        <li>结合传统艺术元素与现代科技手段</li>
+                        <li>强调观众参与和互动体验</li>
+                        <li>探索可持续材料在艺术创作中的应用</li>
+                        <li>通过视觉、触觉等多感官体验传递艺术理念</li>
+                    </ul>
+                    <p><strong>项目目标：</strong></p>
+                    <ul>
+                        <li>完成一个具有创新性的艺术装置</li>
+                        <li>展示艺术与科技结合的多种可能性</li>
+                        <li>提供独特的观众互动体验</li>
+                        <li>体现我们团队的设计理念和创意能力</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 使用材料部分 -->
+            <div class="final-work-section fade-in" style="animation-delay: 0.2s;">
+                <h2>️ 使用材料</h2>
+                <div class="work-content">
+                    <h3>主要材料清单：</h3>
+                    <ul>
+                        <li>亚克力板 - 用于制作透明结构和灯光效果</li>
+                        <li>LED灯带 - 营造氛围照明和动态光效</li>
+                        <li>Arduino开发板 - 控制互动感应和灯光系统</li>
+                        <li>传感器模块 - 实现人体感应和互动功能</li>
+                        <li>环保木材 - 作为主要结构支撑材料</li>
+                        <li>金属连接件 - 固定和连接各部件</li>
+                        <li>喷漆和涂料 - 表面处理与美化</li>
+                        <li>电线和连接器 - 电路连接</li>
+                    </ul>
+                    <p><strong>材料特点：</strong></p>
+                    <ul>
+                        <li>环保可持续，符合绿色设计理念</li>
+                        <li>耐用性强，确保作品长期展示效果</li>
+                        <li>轻量化设计，便于安装和维护</li>
+                        <li>成本合理，具有较高的性价比</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 视频展示部分 -->
+            <div class="final-work-section fade-in" style="animation-delay: 0.3s;">
+                <h2>🎬 视频展示</h2>
+                <div class="work-content">
+                    <p>以下是我们最终作品的视频展示，包括制作过程和最终效果：</p>
+                    
+                    <div class="video-container">
+                        <!-- 这里可以替换为实际的视频链接或嵌入代码 -->
+                        <video controls poster="memoji.png">
+                            <source src="final-work-video.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放。
+                        </video>
+                    </div>
+                    
+                    <p style="margin-top: 1rem;"><strong>视频内容包括：</strong></p>
+                    <ul>
+                        <li>作品介绍和设计理念阐述</li>
+                        <li>制作过程的精彩瞬间</li>
+                        <li>最终成品展示和互动演示</li>
+                        <li>团队成员介绍和分工说明</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2024 这是啥组 · 浙江万里学院 · 艺术与科技专业</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+            }
+        });
+    </script>
+</body>
+</html>

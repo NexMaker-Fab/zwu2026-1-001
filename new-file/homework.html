@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是啥组 - Daily Homework</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1f308;</text></svg>">
+    <link rel="stylesheet" href="style-new.css">
+    <style>
+        .homework-card { cursor: pointer; }
+        .homework-card .upload-btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .homework-card .upload-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(99,102,241,0.4);
+        }
+        .file-list {
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: var(--medium-gray);
+        }
+        .file-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .file-list a:hover { text-decoration: underline; }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal.active { display: flex; }
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .modal-content h2 { margin-bottom: 1rem; }
+        .modal-content .close-btn {
+            float: right;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--medium-gray);
+        }
+        .upload-area {
+            border: 2px dashed var(--primary-color);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin: 1rem 0;
+            transition: all 0.3s;
+        }
+        .upload-area:hover, .upload-area.dragover {
+            background: rgba(99,102,241,0.1);
+        }
+        .upload-area input[type="file"] { display: none; }
+        .upload-area label {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+        .uploaded-files { margin-top: 1rem; }
+        .uploaded-files .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            background: var(--light-gray);
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+        .uploaded-files .file-item .delete-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .success-msg {
+            display: none;
+            padding: 1rem;
+            background: #10b981;
+            color: white;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        select {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">这是啥组</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team Members</a></li>
+                <li><a href="homework.html" class="active">Daily Homework</a></li>
+                <li><a href="final-work.html">Final Work</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="main-content">
+        <div class="container">
+            <div class="page-title fade-in">
+                <h1>日常作业</h1>
+                <p>点击"上传作业"按钮提交你的作业文件</p>
+            </div>
+            <div class="homework-grid">
+                <div class="homework-card fade-in" style="animation-delay: 0.1s;">
+                    <h3>&#x1f4d0; 第一次作业</h3>
+                    <p><strong>日期：</strong>2024年9月</p>
+                    <p><strong>内容：</strong>基础造型练习</p>
+                    <button class="upload-btn" onclick="openModal('homework1')">上传作业</button>
+                    <div class="file-list" id="list-homework1"></div>
+                </div>
+                <div class="homework-card fade-in" style="animation-delay: 0.2s;">
+                    <h3>&#x1f3a8; 第二次作业</h3>
+                    <p><strong>日期：</strong>2024年10月</p>
+                    <p><strong>内容：</strong>色彩构成设计</p>
+                    <button class="upload-btn" onclick="openModal('homework2')">上传作业</button>
+                    <div class="file-list" id="list-homework2"></div>
+                </div>
+                <div class="homework-card fade-in" style="animation-delay: 0.3s;">
+                    <h3>&#x1f4a1; 第三次作业</h3>
+                    <p><strong>日期：</strong>2024年11月</p>
+                    <p><strong>内容：</strong>创意概念设计</p>
+                    <button class="upload-btn" onclick="openModal('homework3')">上传作业</button>
+                    <div class="file-list" id="list-homework3"></div>
+                </div>
+                <div class="homework-card fade-in" style="animation-delay: 0.4s;">
+                    <h3>&#x1f31f; 第四次作业</h3>
+                    <p><strong>日期：</strong>2024年12月</p>
+                    <p><strong>内容：</strong>数字媒体作品</p>
+                    <button class="upload-btn" onclick="openModal('homework4')">上传作业</button>
+                    <div class="file-list" id="list-homework4"></div>
+                </div>
+                <div class="homework-card fade-in" style="animation-delay: 0.5s;">
+                    <h3>&#x2728; 第五次作业</h3>
+                    <p><strong>日期：</strong>2025年1月</p>
+                    <p><strong>内容：</strong>综合材料探索</p>
+                    <button class="upload-btn" onclick="openModal('homework5')">上传作业</button>
+                    <div class="file-list" id="list-homework5"></div>
+                </div>
+                <div class="homework-card fade-in" style="animation-delay: 0.6s;">
+                    <h3>&#x1f3af; 第六次作业</h3>
+                    <p><strong>日期：</strong>2025年3月</p>
+                    <p><strong>内容：</strong>空间设计实践</p>
+                    <button class="upload-btn" onclick="openModal('homework6')">上传作业</button>
+                    <div class="file-list" id="list-homework6"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer"><p>&copy; 2024 这是啥组 &middot; 浙江万里学院 &middot; 艺术与科技专业</p></footer>
+
+    <!-- Upload Modal -->
+    <div class="modal" id="uploadModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <h2 id="modalTitle">上传作业</h2>
+            <p>选择成员：</p>
+            <select id="memberSelect">
+                <option value="">请选择成员</option>
+                <option value="wangyuhan">王昱涵 (2024014747)</option>
+                <option value="chenguo">陈过 (2024014742)</option>
+                <option value="caiyitong">蔡仪彤 (2024014735)</option>
+                <option value="caiaomi">蔡奥秘 (2024014745)</option>
+            </select>
+            <div class="upload-area" id="uploadArea">
+                <p>&#x1f4c1; 拖拽文件到此处</p>
+                <p>或</p>
+                <label for="fileInput">选择文件</label>
+                <input type="file" id="fileInput" multiple>
+            </div>
+            <div class="uploaded-files" id="uploadedFiles"></div>
+            <button class="btn btn-primary" style="width:100%;margin-top:1rem;" onclick="uploadFiles()">确认上传</button>
+            <div class="success-msg" id="successMsg">&#x2705; 上传成功！</div>
+        </div>
+    </div>
+
+    <script>
+        let currentHomework = '';
+        let selectedFiles = [];
+
+        function openModal(homeworkId) {
+            currentHomework = homeworkId;
+            const titles = {
+                homework1: '&#x1f4d0; 第一次作业 - 上传',
+                homework2: '&#x1f3a8; 第二次作业 - 上传',
+                homework3: '&#x1f4a1; 第三次作业 - 上传',
+                homework4: '&#x1f31f; 第四次作业 - 上传',
+                homework5: '&#x2728; 第五次作业 - 上传',
+                homework6: '&#x1f3af; 第六次作业 - 上传'
+            };
+            document.getElementById('modalTitle').textContent = titles[homeworkId].replace(/&#[^;]+;/g, function(m){
+                var p = document.createElement('p'); p.innerHTML = m; return p.textContent;
+            });
+            document.getElementById('uploadModal').classList.add('active');
+            selectedFiles = [];
+            updateFileList();
+            document.getElementById('successMsg').style.display = 'none';
+        }
+
+        function closeModal() {
+            document.getElementById('uploadModal').classList.remove('active');
+        }
+
+        document.getElementById('uploadArea').addEventListener('dragover', (e) => {
+            e.preventDefault();
+            e.currentTarget.classList.add('dragover');
+        });
+        document.getElementById('uploadArea').addEventListener('dragleave', (e) => {
+            e.currentTarget.classList.remove('dragover');
+        });
+        document.getElementById('uploadArea').addEventListener('drop', (e) => {
+            e.preventDefault();
+            e.currentTarget.classList.remove('dragover');
+            addFiles(e.dataTransfer.files);
+        });
+        document.getElementById('fileInput').addEventListener('change', (e) => addFiles(e.target.files));
+
+        function addFiles(files) {
+            for (let f of files) selectedFiles.push(f);
+            updateFileList();
+        }
+
+        function updateFileList() {
+            document.getElementById('uploadedFiles').innerHTML = selectedFiles.map((f, i) =>
+                '<div class="file-item"><span>' + f.name + ' (' + (f.size/1024).toFixed(1) + ' KB)</span>' +
+                '<button class="delete-btn" onclick="removeFile(' + i + ')">&times;</button></div>'
+            ).join('');
+        }
+
+        function removeFile(index) {
+            selectedFiles.splice(index, 1);
+            updateFileList();
+        }
+
+        async function uploadFiles() {
+            const member = document.getElementById('memberSelect').value;
+            if (!member) { alert('请选择成员！'); return; }
+            if (selectedFiles.length === 0) { alert('请选择文件！'); return; }
+
+            const formData = new FormData();
+            formData.append('homework', currentHomework);
+            formData.append('member', member);
+            for (let f of selectedFiles) formData.append('files', f);
+
+            try {
+                const res = await fetch('/upload', { method: 'POST', body: formData });
+                const data = await res.json();
+                if (data.success) {
+                    document.getElementById('successMsg').style.display = 'block';
+                    selectedFiles = [];
+                    updateFileList();
+                    loadFiles();
+                    setTimeout(closeModal, 1500);
+                } else {
+                    alert('上传失败: ' + data.error);
+                }
+            } catch (e) {
+                alert('上传失败，请确保服务器正在运行！\n请使用: python server.py 启动服务器');
+            }
+        }
+
+        async function loadFiles() {
+            for (let i = 1; i <= 6; i++) {
+                try {
+                    const res = await fetch('/list?homework=homework' + i);
+                    const data = await res.json();
+                    const listEl = document.getElementById('list-homework' + i);
+                    if (data.files && data.files.length > 0) {
+                        listEl.innerHTML = '<strong>已上传：</strong><br>' + data.files.map(f =>
+                            '<a href="/uploads/' + f + '" target="_blank">&#x1f4c4; ' + f + '</a>'
+                        ).join('<br>');
+                    } else {
+                        listEl.innerHTML = '';
+                    }
+                } catch (e) {}
+            }
+        }
+
+        loadFiles();
+    </script>
+</body>
+</html>

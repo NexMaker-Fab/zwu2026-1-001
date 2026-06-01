@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是啥组 - Daily Homework</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌈</text></svg>">
+    <link rel="stylesheet" href="style-new.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">这是啥组</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team Members</a></li>
+                <li><a href="homework.html" class="active">Daily Homework</a></li>
+                <li><a href="final-work.html">Final Work</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="main-content">
+        <div class="container">
+            <!-- 页面标题 -->
+            <div class="page-title fade-in">
+                <h1>日常作业</h1>
+                <p>我们的日常学习成果展示</p>
+            </div>
+
+            <!-- 作业列表 -->
+            <div class="homework-grid">
+                <div class="homework-card fade-in" style="animation-delay: 0.1s;">
+                    <h3>📐 第一次作业</h3>
+                    <p><strong>日期：</strong>2024年9月</p>
+                    <p><strong>内容：</strong>基础造型练习</p>
+                    <p><strong>成员：</strong>全体成员</p>
+                </div>
+
+                <div class="homework-card fade-in" style="animation-delay: 0.2s;">
+                    <h3>🎨 第二次作业</h3>
+                    <p><strong>日期：</strong>2024年10月</p>
+                    <p><strong>内容：</strong>色彩构成设计</p>
+                    <p><strong>成员：</strong>全体成员</p>
+                </div>
+
+                <div class="homework-card fade-in" style="animation-delay: 0.3s;">
+                    <h3>💡 第三次作业</h3>
+                    <p><strong>日期：</strong>2024年11月</p>
+                    <p><strong>内容：</strong>创意概念设计</p>
+                    <p><strong>成员：</strong>全体成员</p>
+                </div>
+
+                <div class="homework-card fade-in" style="animation-delay: 0.4s;">
+                    <h3>🌟 第四次作业</h3>
+                    <p><strong>日期：</strong>2024年12月</p>
+                    <p><strong>内容：</strong>数字媒体作品</p>
+                    <p><strong>成员：</strong>全体成员</p>
+                </div>
+
+                <div class="homework-card fade-in" style="animation-delay: 0.5s;">
+                    <h3>✨ 第五次作业</h3>
+                    <p><strong>日期：</strong>2025年1月</p>
+                    <p><strong>内容：</strong>综合材料探索</p>
+                    <p><strong>成员：</strong>全体成员</p>
+                </div>
+
+                <div class="homework-card fade-in" style="animation-delay: 0.6s;">
+                    <h3>🎯 第六次作业</h3>
+                    <p><strong>日期：</strong>2025年3月</p>
+                    <p><strong>内容：</strong>空间设计实践</p>
+                    <p><strong>成员：</strong>全体成员</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2024 这是啥组 · 浙江万里学院 · 艺术与科技专业</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+            }
+        });
+    </script>
+</body>
+</html>
