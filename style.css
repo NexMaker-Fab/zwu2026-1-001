@@ -1,4 +1,3 @@
-NEW_FILE_CODE
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +33,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* 导航栏 - 固定顶部半透明 */
 .navbar {
     position: fixed;
     top: 0;
@@ -113,7 +111,6 @@ body {
     width: 100%;
 }
 
-/* 首屏 Banner */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -187,7 +184,6 @@ body {
     box-shadow: var(--shadow-medium);
 }
 
-/* 小组成员介绍 */
 .members {
     padding: 160px 48px;
     background: var(--bg-white);
@@ -225,32 +221,13 @@ body {
     padding: 56px 32px;
     text-align: center;
     transition: var(--transition-smooth);
-    cursor: pointer;
-    border: 1px solid rgba(197, 191, 184, 0.3);
-    position: relative;
-    overflow: hidden;
-}
-
-.member-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--morandi-blue), var(--morandi-pink));
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    border: 1px solid rgba(197, 191, 184, 0.2);
 }
 
 .member-card:hover {
-    transform: translateY(-12px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
-    border-color: transparent;
-}
-
-.member-card:hover::before {
-    opacity: 1;
+    border-color: rgba(168, 181, 196, 0.3);
 }
 
 .member-avatar {
@@ -264,11 +241,20 @@ body {
     justify-content: center;
     box-shadow: var(--shadow-soft);
     transition: var(--transition-smooth);
+    overflow: hidden;
 }
 
 .member-card:hover .member-avatar {
     transform: scale(1.05);
     box-shadow: var(--shadow-medium);
+}
+
+.member-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
 }
 
 .avatar-icon {
@@ -277,162 +263,31 @@ body {
 }
 
 .member-name {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
-    margin-bottom: 12px;
-    letter-spacing: 2px;
+    margin-bottom: 8px;
     color: var(--text-primary);
-}
-
-.member-id {
-    font-size: 13px;
-    color: var(--text-light);
-    margin-bottom: 6px;
     letter-spacing: 1px;
 }
 
-.member-major {
-    font-size: 12px;
-    color: var(--text-light);
-    letter-spacing: 1.5px;
-    font-weight: 300;
-}
-
-/* 作业展示部分 */
-.works {
-    padding: 160px 48px;
-    background: var(--bg-cream);
-}
-
-.works-grid {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-}
-
-.work-card {
-    background: var(--bg-white);
-    border-radius: 20px;
-    overflow: hidden;
-    transition: var(--transition-smooth);
-    box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(197, 191, 184, 0.2);
-}
-
-.work-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-    border-color: transparent;
-}
-
-.work-image {
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
-    position: relative;
-}
-
-.work-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, transparent 60%, rgba(74, 74, 74, 0.1));
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.work-card:hover .work-image::after {
-    opacity: 1;
-}
-
-.work-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.work-card:hover .work-image img {
-    transform: scale(1.08);
-}
-
-.work-content {
-    padding: 32px;
-}
-
-.work-title {
-    font-size: 19px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    letter-spacing: 1.2px;
-    color: var(--text-primary);
-}
-
-.work-author {
-    font-size: 12px;
-    color: var(--morandi-blue);
-    margin-bottom: 14px;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-.work-desc {
+.member-role {
     font-size: 14px;
     color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 20px;
-    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
 }
 
-.work-tag {
-    display: inline-block;
-    padding: 8px 16px;
-    background: var(--bg-cream);
-    color: var(--text-secondary);
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    transition: var(--transition-smooth);
-}
-
-.work-card:hover .work-tag {
-    background: var(--morandi-blue);
-    color: var(--bg-white);
-}
-
-/* 页脚 */
-.footer {
-    background: var(--text-primary);
-    padding: 48px 48px;
-}
-
-.footer-content {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.footer-bottom {
-    text-align: center;
-}
-
-.footer-copyright {
-    font-size: 12px;
+.member-desc {
+    font-size: 13px;
     color: var(--text-light);
-    letter-spacing: 1.5px;
-    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
 }
 
-/* 动画 */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -440,63 +295,52 @@ body {
     }
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* 响应式布局 */
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
     .member-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
     }
     
-    .works-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .nav-container {
+        padding: 0 24px;
+    }
+    
+    .hero, .members {
+        padding-left: 24px;
+        padding-right: 24px;
     }
 }
 
 @media (max-width: 768px) {
-    .nav-container {
-        padding: 0 24px;
-    }
-
     .nav-menu {
-        gap: 24px;
+        display: none;
     }
-
-    .hero {
-        padding: 100px 24px 60px;
+    
+    .hero h1 {
+        letter-spacing: 6px;
     }
-
-    .members,
-    .works {
-        padding: 100px 24px;
+    
+    .hero p {
+        letter-spacing: 2px;
     }
-
-    .member-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-
-    .works-grid {
-        grid-template-columns: 1fr;
-    }
-
+    
     .hero-buttons {
         flex-direction: column;
         width: 100%;
-        max-width: 280px;
+        max-width: 300px;
     }
-
+    
     .btn {
         width: 100%;
         text-align: center;
+    }
+    
+    .member-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .section-title {
+        letter-spacing: 3px;
     }
 }

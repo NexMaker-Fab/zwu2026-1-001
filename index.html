@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>第一小组 - 艺术与科技</title>
+    <title>这是啥组 - 艺术与科技</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">第一小组</a>
+            <a href="#" class="nav-logo">这是啥组</a>
             <ul class="nav-menu">
                 <li><a href="#home">首页</a></li>
                 <li><a href="#members">小组成员</a></li>
@@ -21,7 +21,7 @@
 
     <!-- Home首页 -->
     <section class="hero" id="home">
-        <h1>第一小组</h1>
+        <h1>这是啥组</h1>
         <p>艺术与科技专业</p>
         <div class="hero-buttons">
             <a href="#members" class="btn btn-primary">查看成员</a>
@@ -29,7 +29,6 @@
         </div>
     </section>
 
-    <!-- 小组成员介绍 -->
     <section class="members" id="members">
         <h2 class="section-title fade-in">小组成员</h2>
         <p class="section-subtitle fade-in">艺术与科技专业 · 四人团队</p>
@@ -37,7 +36,7 @@
         <div class="member-grid">
             <div class="member-card fade-in">
                 <div class="member-avatar">
-                    <span class="avatar-icon">👤</span>NEW_FILE_CODE
+                    <img src="images/avatar1.jpg" alt="陈过" class="member-photo">
                 </div>
                 <h3 class="member-name">陈过</h3>
                 <p class="member-id">学号：2024014742</p>
@@ -46,7 +45,7 @@
 
             <div class="member-card fade-in">
                 <div class="member-avatar">
-                    <span class="avatar-icon">👤</span>
+                    <img src="images/avatar2.jpg" alt="蔡奥秘" class="member-photo">
                 </div>
                 <h3 class="member-name">蔡奥秘</h3>
                 <p class="member-id">学号：2024014745</p>
@@ -55,7 +54,7 @@
 
             <div class="member-card fade-in">
                 <div class="member-avatar">
-                    <span class="avatar-icon">👤</span>
+                    <img src="images/avatar3.jpg" alt="蔡仪彤" class="member-photo">
                 </div>
                 <h3 class="member-name">蔡仪彤</h3>
                 <p class="member-id">学号：2024014735</p>
@@ -64,7 +63,7 @@
 
             <div class="member-card fade-in">
                 <div class="member-avatar">
-                    <span class="avatar-icon">👤</span>
+                    <img src="images/avatar4.jpg" alt="王昱涵" class="member-photo">
                 </div>
                 <h3 class="member-name">王昱涵</h3>
                 <p class="member-id">学号：2024014747</p>
@@ -73,7 +72,6 @@
         </div>
     </section>
 
-    <!-- 作业展示部分 -->
     <section class="works" id="works">
         <h2 class="section-title fade-in">作业展示</h2>
         <p class="section-subtitle fade-in">我们的创意作品与项目成果</p>
@@ -157,13 +155,12 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2026 第一小组 - 艺术与科技专业. 保留所有权利.</p>
+                <p class="footer-copyright">© 2026 这是啥组 - 艺术与科技专业. 保留所有权利.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // 平滑滚动
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -177,7 +174,6 @@
             });
         });
 
-        // 导航栏滚动效果
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
@@ -187,7 +183,6 @@
             }
         });
 
-        // 淡入动画（滚动触发）
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -80px 0px'
