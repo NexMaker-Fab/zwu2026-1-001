@@ -5,173 +5,217 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>这是啥组 - 艺术与科技</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">这是啥组</a>
+            <a href="index.html" class="nav-logo">这是啥组</a>
             <ul class="nav-menu">
                 <li><a href="#home">首页</a></li>
-                <li><a href="#members">小组成员</a></li>
-                <li><a href="#works">作业展示</a></li>
+                <li><a href="#members">成员</a></li>
+                <li><a href="#works">作品</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Home首页 -->
     <section class="hero" id="home">
-        <h1>这是啥组</h1>
-        <p>艺术与科技专业</p>
-        <div class="hero-buttons">
-            <a href="#members" class="btn btn-primary">查看成员</a>
-            <a href="#works" class="btn btn-secondary">浏览作业</a>
+        <div class="hero-content">
+            <h1 class="hero-title">这是啥组</h1>
+            <p class="hero-subtitle">艺术与科技专业</p>
+            <div class="hero-line"></div>
+            <div class="hero-buttons">
+                <a href="#members" class="btn btn-outline">探索团队</a>
+                <a href="#works" class="btn btn-outline">查看作品</a>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="geo-cross geo-cross-1"></div>
+            <div class="geo-cross geo-cross-2"></div>
+            <div class="geo-cross geo-cross-3"></div>
+            <div class="geo-diamond geo-diamond-1"></div>
+            <div class="geo-diamond geo-diamond-2"></div>
+            <div class="geo-diamond geo-diamond-3"></div>
+            <div class="geo-circle geo-circle-1"></div>
+            <div class="geo-circle geo-circle-2"></div>
+            <div class="geo-circle geo-circle-3"></div>
+            <div class="geo-square geo-square-1"></div>
+            <div class="geo-square geo-square-2"></div>
         </div>
     </section>
 
     <section class="members" id="members">
-        <h2 class="section-title fade-in">小组成员</h2>
-        <p class="section-subtitle fade-in">艺术与科技专业 · 四人团队</p>
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">小组成员</h2>
+            <p class="section-desc">艺术与科技 · 四人团队</p>
+        </div>
         
         <div class="member-grid">
-            <div class="member-card fade-in">
-                <div class="member-avatar">
+            <div class="member-card">
+                <div class="member-avatar-wrapper">
                     <img src="images/avatar1.jpg" alt="陈过" class="member-photo">
+                    <div class="avatar-frame"></div>
                 </div>
-                <h3 class="member-name">陈过</h3>
-                <p class="member-id">学号：2024014742</p>
-                <p class="member-major">艺术与科技专业</p>
+                <div class="member-info">
+                    <h3 class="member-name">陈过</h3>
+                    <p class="member-id">2024014742</p>
+                    <p class="member-major">艺术与科技</p>
+                </div>
             </div>
 
-            <div class="member-card fade-in">
-                <div class="member-avatar">
+            <div class="member-card">
+                <div class="member-avatar-wrapper">
                     <img src="images/avatar2.jpg" alt="蔡奥秘" class="member-photo">
+                    <div class="avatar-frame"></div>
                 </div>
-                <h3 class="member-name">蔡奥秘</h3>
-                <p class="member-id">学号：2024014745</p>
-                <p class="member-major">艺术与科技专业</p>
+                <div class="member-info">
+                    <h3 class="member-name">蔡奥秘</h3>
+                    <p class="member-id">2024014745</p>
+                    <p class="member-major">艺术与科技</p>
+                </div>
             </div>
 
-            <div class="member-card fade-in">
-                <div class="member-avatar">
+            <div class="member-card">
+                <div class="member-avatar-wrapper">
                     <img src="images/avatar3.jpg" alt="蔡仪彤" class="member-photo">
+                    <div class="avatar-frame"></div>
                 </div>
-                <h3 class="member-name">蔡仪彤</h3>
-                <p class="member-id">学号：2024014735</p>
-                <p class="member-major">艺术与科技专业</p>
+                <div class="member-info">
+                    <h3 class="member-name">蔡仪彤</h3>
+                    <p class="member-id">2024014735</p>
+                    <p class="member-major">艺术与科技</p>
+                </div>
             </div>
 
-            <div class="member-card fade-in">
-                <div class="member-avatar">
+            <div class="member-card">
+                <div class="member-avatar-wrapper">
                     <img src="images/avatar4.jpg" alt="王昱涵" class="member-photo">
+                    <div class="avatar-frame"></div>
                 </div>
-                <h3 class="member-name">王昱涵</h3>
-                <p class="member-id">学号：2024014747</p>
-                <p class="member-major">艺术与科技专业</p>
+                <div class="member-info">
+                    <h3 class="member-name">王昱涵</h3>
+                    <p class="member-id">2024014747</p>
+                    <p class="member-major">艺术与科技</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="works" id="works">
-        <h2 class="section-title fade-in">作业展示</h2>
-        <p class="section-subtitle fade-in">我们的创意作品与项目成果</p>
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">作业展示</h2>
+            <p class="section-desc">创意作品与项目成果</p>
+        </div>
         
         <div class="works-grid">
-            <div class="work-card fade-in">
-                <div class="work-image">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop" alt="作业作品1">
+            <div class="work-card">
+                <div class="work-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop" alt="数字艺术创作">
+                    <div class="work-overlay"></div>
                 </div>
                 <div class="work-content">
+                    <span class="work-category">数字艺术</span>
                     <h3 class="work-title">数字艺术创作</h3>
-                    <p class="work-author">作者：陈过</p>
-                    <p class="work-desc">探索数字媒体与传统艺术的融合，创造出独特的视觉体验。</p>
-                    <span class="work-tag">数字艺术</span>
+                    <p class="work-author">陈过</p>
+                    <p class="work-desc">探索数字媒介在艺术表达中的可能性</p>
                 </div>
             </div>
 
-            <div class="work-card fade-in">
-                <div class="work-image">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="作业作品2">
+            <div class="work-card">
+                <div class="work-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="交互装置设计">
+                    <div class="work-overlay"></div>
                 </div>
                 <div class="work-content">
+                    <span class="work-category">交互设计</span>
                     <h3 class="work-title">交互装置设计</h3>
-                    <p class="work-author">作者：蔡奥秘</p>
-                    <p class="work-desc">结合传感器技术与艺术表达，打造沉浸式互动体验。</p>
-                    <span class="work-tag">交互设计</span>
+                    <p class="work-author">蔡奥秘</p>
+                    <p class="work-desc">让观众成为作品的一部分</p>
                 </div>
             </div>
 
-            <div class="work-card fade-in">
-                <div class="work-image">
-                    <img src="https://images.unsplash.com/photo-1561998338-13ad7883b20f?w=600&h=400&fit=crop" alt="作业作品3">
+            <div class="work-card">
+                <div class="work-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=600&h=400&fit=crop" alt="虚拟现实体验">
+                    <div class="work-overlay"></div>
                 </div>
                 <div class="work-content">
-                    <h3 class="work-title">虚拟现实场景</h3>
-                    <p class="work-author">作者：蔡仪彤</p>
-                    <p class="work-desc">运用VR技术构建虚拟艺术空间，突破现实的限制。</p>
-                    <span class="work-tag">虚拟现实</span>
+                    <span class="work-category">虚拟现实</span>
+                    <h3 class="work-title">虚拟现实体验</h3>
+                    <p class="work-author">蔡仪彤</p>
+                    <p class="work-desc">打破现实与虚拟的边界</p>
                 </div>
             </div>
 
-            <div class="work-card fade-in">
-                <div class="work-image">
-                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop" alt="作业作品4">
+            <div class="work-card">
+                <div class="work-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop" alt="数据可视化艺术">
+                    <div class="work-overlay"></div>
                 </div>
                 <div class="work-content">
-                    <h3 class="work-title">生成艺术作品</h3>
-                    <p class="work-author">作者：王昱涵</p>
-                    <p class="work-desc">通过算法生成独特艺术图案，探索科技与美学的边界。</p>
-                    <span class="work-tag">生成艺术</span>
+                    <span class="work-category">数据艺术</span>
+                    <h3 class="work-title">数据可视化艺术</h3>
+                    <p class="work-author">王昱涵</p>
+                    <p class="work-desc">用美学呈现信息之美</p>
                 </div>
             </div>
 
-            <div class="work-card fade-in">
-                <div class="work-image">
-                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop" alt="作业作品5">
+            <div class="work-card">
+                <div class="work-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop" alt="生成艺术实验">
+                    <div class="work-overlay"></div>
                 </div>
                 <div class="work-content">
-                    <h3 class="work-title">智能灯光装置</h3>
-                    <p class="work-author">作者：陈过、蔡奥秘</p>
-                    <p class="work-desc">利用编程控制LED灯光，创造动态变化的光影艺术。</p>
-                    <span class="work-tag">灯光艺术</span>
+                    <span class="work-category">生成艺术</span>
+                    <h3 class="work-title">生成艺术实验</h3>
+                    <p class="work-author">陈过 / 蔡奥秘</p>
+                    <p class="work-desc">算法与代码的艺术探索</p>
                 </div>
             </div>
 
-            <div class="work-card fade-in">
-                <div class="work-image">
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop" alt="作业作品6">
+            <div class="work-card">
+                <div class="work-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop" alt="新媒体影像">
+                    <div class="work-overlay"></div>
                 </div>
                 <div class="work-content">
-                    <h3 class="work-title">多媒体投影秀</h3>
-                    <p class="work-author">作者：蔡仪彤、王昱涵</p>
-                    <p class="work-desc">融合视频、音频与投影技术，呈现视听盛宴。</p>
-                    <span class="work-tag">多媒体</span>
+                    <span class="work-category">新媒体</span>
+                    <h3 class="work-title">新媒体影像作品</h3>
+                    <p class="work-author">蔡仪彤 / 王昱涵</p>
+                    <p class="work-desc">多维感官体验创造</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
     <footer class="footer">
+        <div class="footer-line"></div>
         <div class="footer-content">
-            <div class="footer-bottom">
-                <p class="footer-copyright">© 2026 这是啥组 - 艺术与科技专业. 保留所有权利.</p>
-            </div>
+            <p class="footer-text">&copy; 2026 这是啥组</p>
+            <p class="footer-subtext">艺术与科技专业</p>
         </div>
     </footer>
 
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
                 }
             });
+        }, observerOptions);
+
+        document.querySelectorAll('.member-card, .work-card').forEach(el => {
+            observer.observe(el);
         });
 
         window.addEventListener('scroll', () => {
@@ -183,21 +227,17 @@
             }
         });
 
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -80px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
         });
     </script>
 </body>
