@@ -79,7 +79,7 @@ body {
 
 .nav-menu {
     display: flex;
-    gap: 50px;
+    gap: 40px;
     list-style: none;
 }
 
@@ -189,7 +189,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* 几何装饰元素 - 增加数量和半透明效果 */
+/* 几何装饰元素 */
 .hero-decoration {
     position: absolute;
     width: 100%;
@@ -354,7 +354,8 @@ body {
 
 /* Section 通用样式 */
 .members,
-.works {
+.works,
+.final-work {
     padding: 150px 60px;
     background: var(--black);
 }
@@ -417,6 +418,41 @@ body {
     transform: translateY(0);
 }
 
+.member-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+.member-link:hover {
+    transform: translateY(-8px);
+}
+
+.member-link:hover .member-name {
+    color: var(--gray-300);
+}
+
+.member-link:hover .avatar-frame {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.member-link::after {
+    content: '↗';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: var(--white);
+    opacity: 0;
+    transition: var(--transition-smooth);
+    z-index: 10;
+}
+
+.member-link:hover::after {
+    opacity: 0.6;
+}
+
 .member-avatar-wrapper {
     position: relative;
     width: 100%;
@@ -431,12 +467,10 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center top;
-    filter: grayscale(100%) contrast(1.1);
     transition: var(--transition-smooth);
 }
 
 .member-card:hover .member-photo {
-    filter: grayscale(0%) contrast(1);
     transform: scale(1.05);
 }
 
@@ -482,98 +516,184 @@ body {
     text-transform: uppercase;
 }
 
-/* 作业展示 */
-.works-grid {
-    max-width: 1400px;
+/* 作业展示 - 纯文字列表样式，居中布局 */
+.works-list {
+    max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
-.work-card {
-    position: relative;
+.work-item {
+    padding: 40px 40px;
+    border-bottom: 1px solid var(--gray-800);
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    align-items: center;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.work-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.work-item:first-child {
+    border-top: 1px solid var(--gray-800);
+}
+
+.work-item:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.work-number {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-600);
+    letter-spacing: 2px;
+    font-family: monospace;
+}
+
+.work-title {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+    transition: var(--transition-smooth);
+}
+
+.work-item:hover .work-title {
+    color: var(--gray-200);
+}
+
+.work-desc {
+    font-size: 14px;
+    color: var(--gray-500);
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/* Final Work 期末作品 */
+.final-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.final-card {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.work-card.visible {
+.final-card.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.work-image-wrapper {
+.final-image-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 2/1;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     background: var(--gray-900);
 }
 
-.work-image-wrapper img {
+.final-image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(100%) contrast(1.2);
     transition: var(--transition-smooth);
 }
 
-.work-card:hover .work-image-wrapper img {
-    filter: grayscale(0%) contrast(1);
-    transform: scale(1.05);
+.final-card:hover .final-image-wrapper img {
+    transform: scale(1.02);
 }
 
-.work-overlay {
+.final-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.8));
+    background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.6));
     opacity: 0;
     transition: var(--transition-smooth);
 }
 
-.work-card:hover .work-overlay {
+.final-card:hover .final-overlay {
     opacity: 1;
 }
 
-.work-content {
-    padding: 0;
+.final-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.work-category {
+.final-category {
     display: inline-block;
-    font-size: 11px;
-    color: var(--gray-500);
-    letter-spacing: 3px;
-    margin-bottom: 12px;
+    font-size: 12px;
+    color: var(--gray-400);
+    letter-spacing: 4px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     font-weight: 500;
 }
 
-.work-title {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+.final-title {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 900;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
     color: var(--white);
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
-.work-author {
-    font-size: 13px;
-    color: var(--gray-400);
-    margin-bottom: 8px;
-    letter-spacing: 1px;
-}
-
-.work-desc {
+.final-team {
     font-size: 14px;
-    color: var(--gray-600);
-    line-height: 1.6;
+    color: var(--gray-400);
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.final-desc {
+    font-size: 16px;
+    color: var(--gray-500);
+    line-height: 1.8;
+    margin-bottom: 32px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.final-tags {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.final-tag {
+    padding: 8px 20px;
+    border: 1px solid var(--gray-700);
+    font-size: 11px;
+    color: var(--gray-400);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+}
+
+.final-tag:hover {
+    border-color: var(--white);
+    color: var(--white);
 }
 
 /* 页脚 */
@@ -629,10 +749,6 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
     }
-    
-    .works-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media (max-width: 768px) {
@@ -641,7 +757,7 @@ body {
     }
 
     .nav-menu {
-        gap: 25px;
+        gap: 20px;
     }
 
     .nav-menu a {
@@ -673,7 +789,8 @@ body {
     }
 
     .members,
-    .works {
+    .works,
+    .final-work {
         padding: 100px 30px;
     }
 
@@ -691,9 +808,35 @@ body {
         gap: 60px;
     }
 
-    .works-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
+    .work-item {
+        grid-template-columns: 60px 1fr;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .work-desc {
+        display: none;
+    }
+
+    .work-title {
+        font-size: 22px;
+    }
+
+    .final-image-wrapper {
+        aspect-ratio: 4/3;
+    }
+
+    .final-title {
+        font-size: 28px;
+    }
+
+    .final-tags {
+        gap: 8px;
+    }
+
+    .final-tag {
+        padding: 6px 14px;
+        font-size: 10px;
     }
 
     .geo-cross,
