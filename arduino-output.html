@@ -1,0 +1,268 @@
+NEW_FILE_CODE
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Output - 这是啥组</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">这是啥组</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#members">成员</a></li>
+                <li><a href="index.html#works">作业</a></li>
+                <li><a href="index.html#final">期末作品</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="pm-hero">
+        <div class="pm-content">
+            <h1 class="pm-title">Arduino Output</h1>
+            <p class="pm-subtitle">Arduino 输出 · 流水灯实验项目</p>
+            <div class="pm-line"></div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">01</span>
+                <h2 class="step-title">Learning Open Source Tools</h2>
+                <p class="step-desc">学习开源工具</p>
+            </div>
+
+            <div class="step-description">
+                <p>Three code management and development tools are learned in this section: Lingma, GitHub, GitHub Desktop</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">1.1 Tool Introduction</h3>
+                
+                <div class="tool-item">
+                    <h4 class="tool-name">1. Lingma</h4>
+                    <p class="tool-desc">A professional code editing assistant. It supports code formatting, real-time syntax checking and intelligent code prompts. It improves programming efficiency and reduces syntax errors.</p>
+                </div>
+
+                <div class="tool-item">
+                    <h4 class="tool-name">2. GitHub</h4>
+                    <p class="tool-desc">The world's leading open-source code hosting platform. It provides code storage, version control, project collaboration and open-source sharing services. It is an important platform for developers to communicate and learn excellent open-source projects.</p>
+                </div>
+
+                <div class="tool-item">
+                    <h4 class="tool-name">3. GitHub Desktop</h4>
+                    <p class="tool-desc">A graphical desktop tool matched with GitHub. It replaces complex command lines, and supports local code submission, branch management, remote repository synchronization, project pull and push. It is user-friendly for beginners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">02</span>
+                <h2 class="step-title">Hardware & Experiment Overview</h2>
+                <p class="step-desc">硬件与实验概述</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Hardware & Software</h3>
+                <div class="hardware-list">
+                    <div class="hardware-item">
+                        <span class="hardware-label">Hardware:</span>
+                        <span class="hardware-value">Arduino R4 WiFi</span>
+                    </div>
+                    <div class="hardware-item">
+                        <span class="hardware-label">Supporting Software:</span>
+                        <span class="hardware-value">Arduino IDE</span>
+                    </div>
+                    <div class="hardware-item">
+                        <span class="hardware-label">Experiment:</span>
+                        <span class="hardware-value">Flowing LED Light Project</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Hardware Introduction</h3>
+                <p class="hardware-intro">Arduino R4 WiFi is an open-source main control board with a built-in WiFi module. It delivers strong computing power and great scalability, suitable for IoT, light interaction and other electronic experiments.</p>
+                
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h4 class="feature-title">Hardware Configuration</h4>
+                        <p class="feature-desc">Integrated WiFi module, equipped with multiple digital and analog pins for connecting LED lights, sensors and functional modules.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4 class="feature-title">Ecosystem Compatibility</h4>
+                        <p class="feature-desc">Fully compatible with official and third-party Arduino libraries, featuring great adaptability and low learning threshold.</p>
+                    </div>
+                </div>
+
+                <p class="experiment-summary">In this experiment, Arduino R4 WiFi serves as the core hardware matched with external LED modules. We use Arduino IDE to write control code and realize the flowing light effect.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">03</span>
+                <h2 class="step-title">Running the Flowing LED Light Program</h2>
+                <p class="step-desc">运行流水灯程序</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">1 - Library Installation Steps</h3>
+                <p class="library-note">This flowing light experiment uses basic digital pin control and does not require any additional third-party libraries. You can write, compile, and upload the code directly in the Arduino IDE.</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">2 - Application Code</h3>
+                
+                <h4 class="code-subtitle">2.1 Final Flowing Light Code</h4>
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image222/2-1.png" alt="流水灯代码" class="step-image">
+                        <p class="image-caption">图片 2-1</p>
+                    </div>
+                </div>
+
+                <h4 class="code-subtitle">2.2 Code Logic Explanation</h4>
+                <div class="code-explanation">
+                    <div class="explanation-item">
+                        <span class="explanation-label">Pin Definition:</span>
+                        <p class="explanation-text">The array ledPins[] defines the 5 digital pins connected to LEDs, and numLeds stores the total number of LEDs, making it easy to perform batch operations.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <span class="explanation-label">setup() Initialization:</span>
+                        <p class="explanation-text">A for loop sets all LED pins to OUTPUT mode and initializes them to low level, ensuring all LEDs are off when powered on.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <span class="explanation-label">loop() Core Logic:</span>
+                        <p class="explanation-text">The for loop turns on each LED in sequence, keeps it on for 200ms, then turns it off. This creates a sequential lighting effect from pin 1 to pin 5, forming the "flowing light" effect.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <span class="explanation-label">Adjustable Parameters:</span>
+                        <p class="explanation-text">Modify the value inside delay(200) to change the flow speed of the lights. You can also change the pin numbers in the ledPins[] array to adapt to different wiring schemes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">3 - Circuit Diagram</h3>
+                <p class="circuit-intro">This diagram shows the complete wiring plan for the flowing light experiment:</p>
+                
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image222/2-2.png" alt="电路图" class="step-image">
+                        <p class="image-caption">图片 2-2</p>
+                    </div>
+                </div>
+
+                <div class="circuit-details">
+                    <h4 class="detail-title">Components</h4>
+                    <p class="detail-text">Arduino UNO main board, breadboard, 5 LED beads, 5 current-limiting resistors.</p>
+                    
+                    <h4 class="detail-title">Wiring Logic</h4>
+                    <ol class="wiring-steps">
+                        <li>Digital pins 1~5 of the Arduino are connected to the anode (long leg) of each corresponding LED through a current-limiting resistor.</li>
+                        <li>The cathode (short leg) of all LEDs is connected to the GND line on the breadboard.</li>
+                        <li>The breadboard's GND line is finally connected to the Arduino's GND pin to form a complete circuit.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">4 - Physical Connection Steps</h3>
+                <p class="connection-intro">Follow these steps based on the circuit diagram:</p>
+                
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image222/2-3.png" alt="实物连接" class="step-image">
+                        <p class="image-caption">图片 2-3</p>
+                    </div>
+                </div>
+
+                <ol class="connection-steps">
+                    <li>Connect the Arduino UNO to your computer via a USB cable to ensure power supply and device recognition.</li>
+                    <li>Insert 5 LEDs into the breadboard with the anode (long leg) facing the resistor side and the cathode (short leg) facing the GND side.</li>
+                    <li>Connect a 220Ω current-limiting resistor to the anode of each LED, then use jumper wires to connect the resistors to Arduino digital pins 1~5.</li>
+                    <li>Connect the cathode of all LEDs to the Arduino's GND pin via the same column on the breadboard.</li>
+                    <li>Confirm there are no short circuits or loose connections before uploading the code for testing.</li>
+                </ol>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">5 - Flowing Light Effect Demonstration</h3>
+                
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image222/2-4.jpg" alt="流水灯效果1" class="step-image">
+                        <p class="image-caption">图片 2-4</p>
+                    </div>
+                    
+                    <div class="image-card">
+                        <img src="image222/2-5.jpg" alt="流水灯效果2" class="step-image">
+                        <p class="image-caption">图片 2-5</p>
+                    </div>
+                </div>
+
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image222/2-6.png" alt="流水灯效果3" class="step-image">
+                        <p class="image-caption">图片 2-6</p>
+                    </div>
+                    
+                    <div class="image-card">
+                        <img src="image222/2-7.png" alt="流水灯效果4" class="step-image">
+                        <p class="image-caption">图片 2-7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2026 这是啥组</p>
+            <p class="footer-subtext">艺术与科技专业</p>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.image-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

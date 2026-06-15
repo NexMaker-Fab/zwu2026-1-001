@@ -936,3 +936,361 @@ body {
         font-size: 14px;
     }
 }
+
+/* Project Management & Arduino Output Pages */
+.pm-hero {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 150px 60px 80px;
+    background: var(--black);
+    position: relative;
+}
+
+.pm-content {
+    position: relative;
+    z-index: 2;
+}
+
+.pm-title {
+    font-size: clamp(80px, 15vw, 180px);
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1;
+    animation: fadeInUp 1s ease-out;
+    text-transform: uppercase;
+}
+
+.pm-subtitle {
+    font-family: var(--font-serif);
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--gray-400);
+    font-weight: 400;
+    margin-bottom: 40px;
+    letter-spacing: 8px;
+    animation: fadeInUp 1s ease-out 0.2s both;
+    text-transform: uppercase;
+}
+
+.pm-line {
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, var(--white), transparent);
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.pm-section {
+    padding: 100px 60px;
+    background: var(--black);
+    border-top: 1px solid var(--gray-900);
+}
+
+.pm-step {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.step-header {
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.step-number {
+    font-size: 120px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    position: absolute;
+    top: -60px;
+    left: -20px;
+    line-height: 1;
+    z-index: 0;
+}
+
+.step-title {
+    font-size: clamp(48px, 6vw, 72px);
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.step-desc {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    color: var(--gray-500);
+    letter-spacing: 4px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.step-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.step-images.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.step-images.centered .image-card {
+    max-width: 400px;
+    width: 100%;
+}
+
+.image-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.image-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.step-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--gray-800);
+    transition: var(--transition-smooth);
+}
+
+.image-card:hover .step-image {
+    border-color: var(--gray-600);
+    transform: scale(1.02);
+}
+
+.image-caption {
+    font-size: 13px;
+    color: var(--gray-500);
+    margin-top: 12px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.step-description {
+    padding: 30px 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 2px solid var(--gray-700);
+    margin: 30px 0;
+}
+
+.step-description p {
+    font-size: 16px;
+    color: var(--gray-400);
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+.step-content-block {
+    margin: 50px 0;
+}
+
+.content-subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.tool-item {
+    margin: 30px 0;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--gray-800);
+}
+
+.tool-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.tool-desc {
+    font-size: 15px;
+    color: var(--gray-400);
+    line-height: 1.8;
+}
+
+.hardware-list {
+    margin: 24px 0;
+}
+
+.hardware-item {
+    display: flex;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray-800);
+}
+
+.hardware-label {
+    font-weight: 700;
+    color: var(--white);
+    min-width: 200px;
+    letter-spacing: 1px;
+}
+
+.hardware-value {
+    color: var(--gray-400);
+    letter-spacing: 0.5px;
+}
+
+.hardware-intro {
+    font-size: 16px;
+    color: var(--gray-400);
+    line-height: 1.8;
+    margin: 24px 0;
+}
+
+.feature-list {
+    margin: 30px 0;
+}
+
+.feature-item {
+    margin: 24px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 2px solid var(--gray-700);
+}
+
+.feature-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.feature-desc {
+    font-size: 15px;
+    color: var(--gray-400);
+    line-height: 1.8;
+}
+
+.experiment-summary {
+    font-size: 16px;
+    color: var(--gray-400);
+    line-height: 1.8;
+    margin: 24px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 2px solid var(--gray-700);
+}
+
+.library-note {
+    font-size: 16px;
+    color: var(--gray-400);
+    line-height: 1.8;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 2px solid var(--gray-700);
+}
+
+.code-subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gray-300);
+    margin: 30px 0 20px;
+    letter-spacing: 1px;
+}
+
+.code-explanation {
+    margin: 30px 0;
+}
+
+.explanation-item {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--gray-800);
+}
+
+.explanation-label {
+    display: block;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.explanation-text {
+    font-size: 15px;
+    color: var(--gray-400);
+    line-height: 1.8;
+}
+
+.circuit-intro {
+    font-size: 16px;
+    color: var(--gray-400);
+    margin-bottom: 30px;
+}
+
+.circuit-details {
+    margin: 30px 0;
+}
+
+.detail-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    margin: 24px 0 12px;
+    letter-spacing: 1px;
+}
+
+.detail-text {
+    font-size: 15px;
+    color: var(--gray-400);
+    line-height: 1.8;
+}
+
+.wiring-steps {
+    margin: 20px 0;
+    padding-left: 24px;
+}
+
+.wiring-steps li {
+    font-size: 15px;
+    color: var(--gray-400);
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+.connection-intro {
+    font-size: 16px;
+    color: var(--gray-400);
+    margin-bottom: 30px;
+}
+
+.connection-steps {
+    margin: 30px 0;
+    padding-left: 24px;
+}
+
+.connection-steps li {
+    font-size: 15px;
+    color: var(--gray-400);
+    line-height: 1.8;
+    margin: 16px 0;
+}
