@@ -853,24 +853,24 @@ body {
     .step-images {
         grid-template-columns: 1fr;
         gap: 30px;
+        padding: 0 15px;
     }
 
     .step-images.centered {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 50px;
-        flex-wrap: wrap;
-        padding: 40px;
+        gap: 30px;
+        flex-wrap: nowrap;
+        padding: 30px 15px;
     }
 
     .step-images.centered .image-card {
-        max-width: 320px;
-        width: 100%;
+        max-width: 100%;
     }
 
     .image-caption {
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 1px;
     }
 
@@ -911,12 +911,13 @@ body {
     .step-images {
         grid-template-columns: 1fr;
         gap: 30px;
+        padding: 0 15px;
     }
 
     .step-images.centered {
         flex-direction: column;
-        gap: 40px;
-        padding: 20px;
+        gap: 30px;
+        padding: 20px 15px;
     }
 
     .step-images.centered .image-card {
@@ -924,7 +925,7 @@ body {
     }
 
     .image-caption {
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 1px;
     }
 
@@ -967,8 +968,8 @@ body {
 
 .pm-subtitle {
     font-family: var(--font-serif);
-    font-size: clamp(16px, 2vw, 20px);
-    color: var(--gray-400);
+    font-size: clamp(18px, 2.5vw, 24px);
+    color: var(--white);
     font-weight: 400;
     margin-bottom: 40px;
     letter-spacing: 8px;
@@ -1024,31 +1025,34 @@ body {
 
 .step-desc {
     font-family: var(--font-serif);
-    font-size: 16px;
-    color: var(--gray-500);
+    font-size: 18px;
+    color: var(--white);
     letter-spacing: 4px;
     font-weight: 400;
     text-transform: uppercase;
 }
 
 .step-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 40px;
     margin: 40px 0;
+    padding: 0 40px;
 }
 
 .step-images.centered {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
-    padding: 40px;
+    gap: 40px;
+    flex-wrap: nowrap;
+    padding: 40px 40px;
+    max-width: 100%;
 }
 
 .step-images.centered .image-card {
-    max-width: 400px;
+    max-width: 1000px;
     width: 100%;
 }
 
@@ -1077,9 +1081,9 @@ body {
 }
 
 .image-caption {
-    font-size: 13px;
-    color: var(--gray-500);
-    margin-top: 12px;
+    font-size: 16px;
+    color: var(--white);
+    margin-top: 16px;
     letter-spacing: 2px;
     text-align: center;
     font-weight: 400;
@@ -1093,8 +1097,8 @@ body {
 }
 
 .step-description p {
-    font-size: 16px;
-    color: var(--gray-400);
+    font-size: 18px;
+    color: var(--white);
     line-height: 1.8;
     letter-spacing: 0.5px;
 }
@@ -1128,8 +1132,8 @@ body {
 }
 
 .tool-desc {
-    font-size: 15px;
-    color: var(--gray-400);
+    font-size: 17px;
+    color: var(--white);
     line-height: 1.8;
 }
 
@@ -1152,13 +1156,13 @@ body {
 }
 
 .hardware-value {
-    color: var(--gray-400);
+    color: var(--white);
     letter-spacing: 0.5px;
 }
 
 .hardware-intro {
-    font-size: 16px;
-    color: var(--gray-400);
+    font-size: 18px;
+    color: var(--white);
     line-height: 1.8;
     margin: 24px 0;
 }
@@ -1183,14 +1187,14 @@ body {
 }
 
 .feature-desc {
-    font-size: 15px;
-    color: var(--gray-400);
+    font-size: 17px;
+    color: var(--white);
     line-height: 1.8;
 }
 
 .experiment-summary {
-    font-size: 16px;
-    color: var(--gray-400);
+    font-size: 18px;
+    color: var(--white);
     line-height: 1.8;
     margin: 24px 0;
     padding: 20px;
@@ -1199,8 +1203,8 @@ body {
 }
 
 .library-note {
-    font-size: 16px;
-    color: var(--gray-400);
+    font-size: 18px;
+    color: var(--white);
     line-height: 1.8;
     padding: 20px;
     background: rgba(255, 255, 255, 0.02);
@@ -1208,9 +1212,9 @@ body {
 }
 
 .code-subtitle {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
-    color: var(--gray-300);
+    color: var(--white);
     margin: 30px 0 20px;
     letter-spacing: 1px;
 }
@@ -1236,14 +1240,14 @@ body {
 }
 
 .explanation-text {
-    font-size: 15px;
-    color: var(--gray-400);
+    font-size: 17px;
+    color: var(--white);
     line-height: 1.8;
 }
 
 .circuit-intro {
-    font-size: 16px;
-    color: var(--gray-400);
+    font-size: 18px;
+    color: var(--white);
     margin-bottom: 30px;
 }
 
@@ -1260,8 +1264,8 @@ body {
 }
 
 .detail-text {
-    font-size: 15px;
-    color: var(--gray-400);
+    font-size: 17px;
+    color: var(--white);
     line-height: 1.8;
 }
 
@@ -1271,15 +1275,15 @@ body {
 }
 
 .wiring-steps li {
-    font-size: 15px;
-    color: var(--gray-400);
+    font-size: 17px;
+    color: var(--white);
     line-height: 1.8;
     margin: 12px 0;
 }
 
 .connection-intro {
-    font-size: 16px;
-    color: var(--gray-400);
+    font-size: 18px;
+    color: var(--white);
     margin-bottom: 30px;
 }
 
@@ -1289,8 +1293,8 @@ body {
 }
 
 .connection-steps li {
-    font-size: 15px;
-    color: var(--gray-400);
+    font-size: 17px;
+    color: var(--white);
     line-height: 1.8;
     margin: 16px 0;
 }
@@ -1316,8 +1320,8 @@ body {
 }
 
 .video-caption {
-    font-size: 14px;
-    color: var(--gray-500);
+    font-size: 16px;
+    color: var(--white);
     margin-top: 16px;
     letter-spacing: 2px;
     text-align: center;
@@ -1346,7 +1350,7 @@ body {
 }
 
 .meta-value {
-    color: var(--gray-400);
+    color: var(--white);
     letter-spacing: 0.5px;
 }
 
@@ -1355,8 +1359,8 @@ body {
 }
 
 .project-description p {
-    font-size: 15px;
-    color: var(--gray-400);
+    font-size: 17px;
+    color: var(--white);
     line-height: 1.8;
     margin: 16px 0;
 }
@@ -1380,20 +1384,20 @@ body {
 }
 
 .analysis-list li {
-    font-size: 15px;
-    color: var(--gray-400);
+    font-size: 17px;
+    color: var(--white);
     line-height: 1.8;
     margin: 14px 0;
 }
 
 .analysis-list li strong {
-    color: var(--gray-300);
+    color: var(--white);
     font-weight: 700;
 }
 
 .analysis-text {
-    font-size: 15px;
-    color: var(--gray-400);
+    font-size: 17px;
+    color: var(--white);
     line-height: 1.8;
     margin: 16px 0;
     padding: 20px;
@@ -1419,8 +1423,8 @@ body {
 }
 
 .function-list li {
-    font-size: 15px;
-    color: var(--gray-400);
+    font-size: 17px;
+    color: var(--white);
     line-height: 1.8;
     margin: 12px 0;
 }
@@ -1527,25 +1531,26 @@ body {
     .step-images {
         grid-template-columns: 1fr;
         gap: 30px;
+        padding: 0 15px;
     }
 
     .step-images.centered {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 50px;
-        flex-wrap: wrap;
-        padding: 40px;
+        gap: 30px;
+        flex-wrap: nowrap;
+        padding: 30px 15px;
     }
 
     .step-images.centered .image-card {
-        max-width: 320px;
-        width: 100%;
+        max-width: 100%;
     }
 
     .image-caption {
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 1px;
+        color: var(--white);
     }
 
     .step-description {
@@ -1553,7 +1558,8 @@ body {
     }
 
     .step-description p {
-        font-size: 14px;
+        font-size: 16px;
+        color: var(--white);
     }
 
     .pm-title {
@@ -1563,6 +1569,7 @@ body {
 
     .pm-subtitle {
         letter-spacing: 3px;
+        color: var(--white);
     }
 
     .pm-section {
@@ -1585,12 +1592,13 @@ body {
     .step-images {
         grid-template-columns: 1fr;
         gap: 30px;
+        padding: 0 15px;
     }
 
     .step-images.centered {
         flex-direction: column;
-        gap: 40px;
-        padding: 20px;
+        gap: 30px;
+        padding: 20px 15px;
     }
 
     .step-images.centered .image-card {
@@ -1598,8 +1606,9 @@ body {
     }
 
     .image-caption {
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 1px;
+        color: var(--white);
     }
 
     .step-description {
@@ -1607,6 +1616,7 @@ body {
     }
 
     .step-description p {
-        font-size: 14px;
+        font-size: 16px;
+        color: var(--white);
     }
 }
