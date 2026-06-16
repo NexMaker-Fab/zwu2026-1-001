@@ -1,0 +1,239 @@
+NEW_FILE_CODE
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino IOT - 这是啥组</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">这是啥组</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#members">成员</a></li>
+                <li><a href="index.html#works">作业</a></li>
+                <li><a href="index.html#final">期末作品</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="pm-hero">
+        <div class="pm-content">
+            <h1 class="pm-title">Arduino IOT</h1>
+            <p class="pm-subtitle">物联网交互 · 智能安全距离预警装置</p>
+            <div class="pm-line"></div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">INTRO</span>
+                <h2 class="step-title">Project Overview</h2>
+                <p class="step-desc">项目概述</p>
+            </div>
+
+            <div class="step-description">
+                <p>This project is a home-based intelligent safety protection IoT device designed for elderly people with mild cognitive impairment. Different from traditional single sensor devices, it constructs a complete edge-side IoT interaction closed loop: environmental perception → data operation → intelligent judgment → human-computer interaction → state self-reset.</p>
+                
+                <p>With Arduino UNO as the main control core, the device collects environmental data through ultrasonic sensors and completes risk judgment via local intelligent algorithms. It finally realizes low-stimulation human-computer interaction through screen visualization and dynamic light prompts, operating fully automatically without manual supervision.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">01</span>
+                <h2 class="step-title">Overall IoT Interaction Architecture</h2>
+                <p class="step-desc">整体物联网交互架构</p>
+            </div>
+
+            <div class="step-description">
+                <p>As a lightweight edge-side intelligent IoT interaction system, the device consists of four layers: the perception collection layer, the core operation layer, the interaction execution layer, and the state reset layer.</p>
+                
+                <p>The coordinated operation of all layers realizes fully automatic interaction from environmental data collection to intelligent feedback without manual intervention, which is suitable for long-term standby monitoring in home scenarios.</p>
+            </div>
+
+            <div class="step-content-block">
+                <div class="architecture-layers">
+                    <div class="layer-item">
+                        <span class="layer-number">01</span>
+                        <div class="layer-content">
+                            <h4 class="layer-title">Perception Collection Layer</h4>
+                            <p class="layer-desc">感知采集层 - 环境数据实时收集</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <span class="layer-number">02</span>
+                        <div class="layer-content">
+                            <h4 class="layer-title">Core Operation Layer</h4>
+                            <p class="layer-desc">核心运算层 - 智能数据判断与状态识别</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <span class="layer-number">03</span>
+                        <div class="layer-content">
+                            <h4 class="layer-title">Interaction Execution Layer</h4>
+                            <p class="layer-desc">交互执行层 - 低刺激智能人机反馈</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <span class="layer-number">04</span>
+                        <div class="layer-content">
+                            <h4 class="layer-title">State Reset Layer</h4>
+                            <p class="layer-desc">状态重置层 - 自适应闭环调节</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">02</span>
+                <h2 class="step-title">Step-by-Step Complete Interaction Operation Process</h2>
+                <p class="step-desc">分步完整交互操作流程</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">1. Perception Collection Layer: Real-Time Environmental Data Collection (Input Interaction)</h3>
+                
+                <div class="process-description">
+                    <p>After power-on and standby, the HC-SR04 ultrasonic sensor works continuously. It emits ultrasonic signals at a fixed frequency and receives echoes. By calculating the round-trip time of sound waves, it collects real-time distance data between people and dangerous areas such as window sills, stoves and balconies, converts analog physical signals into identifiable digital signals, and transmits the data to the Arduino UNO main control chip in real time.</p>
+                    
+                    <p>As the entry of IoT interaction, this process realizes the conversion from physical environment to digital data, endowing the device with the ability to perceive environmental changes and providing data support for subsequent intelligent judgment.</p>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">2. Core Operation Layer: Intelligent Data Judgment and State Identification (Processing Interaction)</h3>
+                
+                <div class="process-description">
+                    <p>The main control chip conducts intelligent logic judgment through built-in program algorithms after receiving real-time distance data, which is the core of the device's intelligence. The system presets two judgment thresholds: a dangerous distance of 60 cm and a dangerous residence time of 3 seconds.</p>
+                    
+                    <p>When the detected distance between the human body and the dangerous area is ≤ 60 cm, the system starts timing and continuously monitors the residence state. If the person does not leave within 3 seconds, the system judges it as a dangerous residence state and triggers an early warning instruction. If the person leaves quickly and the distance returns to the safe range, the system clears the timing data automatically and maintains the safe standby state.</p>
+                    
+                    <p>Different from the single data feedback of traditional sensors, this process realizes active thinking and logical decision-making of IoT devices, avoiding false triggers caused by transient approaching and improving the accuracy of the device.</p>
+                </div>
+
+                <div class="threshold-info">
+                    <div class="threshold-item">
+                        <span class="threshold-label">Dangerous Distance:</span>
+                        <span class="threshold-value">≤ 60 cm</span>
+                    </div>
+                    <div class="threshold-item">
+                        <span class="threshold-label">Dangerous Residence Time:</span>
+                        <span class="threshold-value">≥ 3 seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">3. Interaction Execution Layer: Low-Stimulation Intelligent Human-Computer Feedback (Output Interaction)</h3>
+                
+                <div class="process-description">
+                    <p>Once the system identifies a dangerous state, it activates coordinated human-computer interaction of two modules. Adapting to the sensory characteristics of people with cognitive impairment, it adopts gentle intelligent feedback to avoid anxiety and panic caused by harsh alarms of traditional equipment, forming a humanized IoT interaction experience.</p>
+                </div>
+
+                <div class="feedback-modules">
+                    <div class="feedback-item">
+                        <h4 class="feedback-title">Screen Visual Interaction</h4>
+                        <p class="feedback-desc">The 0.96-inch OLED display immediately refreshes the interface and exits the standby state. It shows the prompt "Please stay away from dangerous areas" in large and concise centered fonts. The intuitive text conforms to the visual habits of the elderly and realizes effective visual safety reminders.</p>
+                    </div>
+
+                    <div class="feedback-item">
+                        <h4 class="feedback-title">Dynamic Light Interaction</h4>
+                        <p class="feedback-desc">The WS2812B light ring starts a warm-yellow breathing gradient effect with gradually changing brightness. The soft and non-glare light provides continuous ambient reminders without noise, achieving low-stimulation long-term safety prompting.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">4. State Reset Layer: Adaptive Closed-Loop Regulation (Cyclic Interaction)</h3>
+                
+                <div class="process-description">
+                    <p>The device supports intelligent self-reset and closed-loop regulation. It keeps monitoring the environmental state after triggering early warnings. When the user leaves the dangerous area and the detection distance returns to over 60 cm (safe range), the system clears the timing data, turns off the early warning state, extinguishes the light ring, and restores the screen to the standby interface showing "Safety Monitoring". The device then returns to the normal monitoring mode.</p>
+                    
+                    <p>This layer realizes dynamic state switching and fully automatic cyclic operation. No manual restart or reset is required, enabling 24-hour unattended intelligent safety protection.</p>
+                </div>
+
+                <div class="reset-flow">
+                    <div class="flow-step">
+                        <span class="flow-icon">→</span>
+                        <p>User leaves dangerous area</p>
+                    </div>
+                    <div class="flow-step">
+                        <span class="flow-icon">→</span>
+                        <p>Distance > 60 cm (safe range)</p>
+                    </div>
+                    <div class="flow-step">
+                        <span class="flow-icon">→</span>
+                        <p>System clears timing data</p>
+                    </div>
+                    <div class="flow-step">
+                        <span class="flow-icon">→</span>
+                        <p>Warning state deactivated</p>
+                    </div>
+                    <div class="flow-step">
+                        <span class="flow-icon">→</span>
+                        <p>Light ring extinguished</p>
+                    </div>
+                    <div class="flow-step">
+                        <span class="flow-icon">→</span>
+                        <p>Screen shows "Safety Monitoring"</p>
+                    </div>
+                    <div class="flow-step">
+                        <span class="flow-icon">→</span>
+                        <p>Return to normal monitoring mode</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2026 这是啥组</p>
+            <p class="footer-subtext">艺术与科技专业</p>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.image-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1429,6 +1429,150 @@ body {
     margin: 12px 0;
 }
 
+/* IoT Interaction Page Styles */
+.architecture-layers {
+    margin: 40px 0;
+    display: grid;
+    gap: 20px;
+}
+
+.layer-item {
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--gray-800);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transition: var(--transition-smooth);
+}
+
+.layer-item:hover {
+    border-color: var(--gray-600);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.layer-number {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--white);
+    min-width: 60px;
+    opacity: 0.3;
+}
+
+.layer-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.layer-desc {
+    font-size: 15px;
+    color: var(--gray-400);
+    letter-spacing: 0.5px;
+}
+
+.process-description {
+    margin: 24px 0;
+}
+
+.process-description p {
+    font-size: 17px;
+    color: var(--white);
+    line-height: 1.8;
+    margin: 16px 0;
+}
+
+.threshold-info {
+    margin: 30px 0;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 2px solid var(--gray-700);
+}
+
+.threshold-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray-800);
+}
+
+.threshold-item:last-child {
+    border-bottom: none;
+}
+
+.threshold-label {
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.threshold-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.feedback-modules {
+    margin: 30px 0;
+    display: grid;
+    gap: 24px;
+}
+
+.feedback-item {
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--gray-800);
+}
+
+.feedback-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.feedback-desc {
+    font-size: 17px;
+    color: var(--white);
+    line-height: 1.8;
+}
+
+.reset-flow {
+    margin: 40px 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--gray-800);
+}
+
+.flow-step {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gray-800);
+}
+
+.flow-step:last-child {
+    border-bottom: none;
+}
+
+.flow-icon {
+    font-size: 24px;
+    color: var(--white);
+    font-weight: 700;
+    min-width: 30px;
+}
+
+.flow-step p {
+    font-size: 16px;
+    color: var(--white);
+    letter-spacing: 0.5px;
+}
+
 @media (max-width: 768px) {
     .nav-container {
         padding: 0 30px;
