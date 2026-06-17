@@ -1,11 +1,11 @@
-NEW_FILE_CODE
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arduino Output - 这是啥组</title>
+    <title>Arduino - 这是啥组</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@ NEW_FILE_CODE
     <section class="pm-hero">
         <div class="pm-content">
             <h1 class="pm-title">Arduino</h1>
-            <p class="pm-subtitle">Arduino 输出 · 流水灯实验项目</p>
+            <p class="pm-subtitle">Arduino 项目 · 流水灯与智能预警装置</p>
             <div class="pm-line"></div>
         </div>
     </section>
@@ -202,46 +202,9 @@ NEW_FILE_CODE
             <div class="step-content-block">
                 <h3 class="content-subtitle">5 - Flowing Light Effect Demonstration</h3>
                 
-                <div class="step-images centered">
-                    <div class="image-card">
-                        <img src="image222/2-4.jpg" alt="流水灯效果1" class="step-image">
-                        <p class="image-caption">图片 2-4</p>
-                    </div>
-                    
-                    <div class="image-card">
-                        <img src="image222/2-5.jpg" alt="流水灯效果2" class="step-image">
-                        <p class="image-caption">图片 2-5</p>
-                    </div>
-                </div>
-
-                <div class="step-images centered">
-                    <div class="image-card">
-                        <img src="image222/2-6.png" alt="流水灯效果3" class="step-image">
-                        <p class="image-caption">图片 2-6</p>
-                    </div>
-                    
-                    <div class="image-card">
-                        <img src="image222/2-7.png" alt="流水灯效果4" class="step-image">
-                        <p class="image-caption">图片 2-7</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="pm-section">
-        <div class="pm-step">
-            <div class="step-header">
-                <span class="step-number">VIEW</span>
-                <h2 class="step-title">Video Demonstration</h2>
-                <p class="step-desc">视频演示</p>
-            </div>
-
-            <div class="step-content-block">
                 <div class="video-container">
                     <video controls class="demo-video" poster="image222/2-1.png">
                         <source src="image222/view1.mp4" type="video/mp4">
-                        <source src="image222/view1.webm" type="video/webm">
                         Your browser does not support the video tag.
                     </video>
                     <p class="video-caption">Flowing LED Light Effect - Video Demo</p>
@@ -253,103 +216,260 @@ NEW_FILE_CODE
     <section class="pm-section">
         <div class="pm-step">
             <div class="step-header">
-                <span class="step-number">04</span>
-                <h2 class="step-title">Find Some Open Source Projects</h2>
-                <p class="step-desc">探索开源项目</p>
+                <span class="step-number">INPUT</span>
+                <h2 class="step-title">Input Part</h2>
+                <p class="step-desc">HC-SR04 | Arduino UNO R4 Wifi</p>
             </div>
 
             <div class="step-content-block">
-                <h3 class="content-subtitle">01. MEMO BOX</h3>
+                <h3 class="content-subtitle">Introduction</h3>
                 
+                <div class="project-description">
+                    <h4 class="detail-subtitle">Project Overview</h4>
+                    <p>This project adopts an Arduino UNO R4 Wifi board paired with an HC-SR04 ultrasonic sensor to collect real-time distance data. When people with cognitive impairment approach the device and the measured distance reaches the preset threshold, the WS2812 LED ring will activate dynamic rotating light effects to deliver visual warning reminders.</p>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Introduction to HC-SR04 Ultrasonic Sensor</h3>
+                
+                <div class="project-description">
+                    <p>The HC-SR04 is a popular ultrasonic ranging module with integrated transceiver and signal circuits for non-contact distance measurement. It emits 40kHz ultrasonic waves and calculates distance via echo return time, causing no mechanical wear. It uses separate Trig and Echo pins, easy to control with most microcontrollers. Its detection range is 2cm to 400cm with an accuracy of ±3mm. Featuring low power consumption, strong anti-noise ability and a 15° narrow detection angle, it delivers stable performance. Compact, affordable and easy to wire, it fits most civilian and maker projects. Note that it has a short-distance blind zone. Its performance is slightly affected by air conditions and soft sound-absorbing objects, so it is not designed for industrial high-precision measurement.</p>
+                </div>
+
                 <div class="step-images centered">
                     <div class="image-card">
-                        <img src="image222/2-4.jpg" alt="MEMO BOX" class="step-image">
+                        <img src="image222/2-4.png" alt="HC-SR04 Ultrasonic Sensor" class="step-image">
                         <p class="image-caption">图片 2-4</p>
                     </div>
                 </div>
+            </div>
 
-                <div class="project-info">
-                    <div class="project-meta">
-                        <span class="meta-label">Artist:</span>
-                        <span class="meta-value">He Ran</span>
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Introduction to Arduino UNO R4 Wifi</h3>
+                
+                <div class="project-description">
+                    <p>The Arduino UNO R4 Wifi is an upgraded entry-level controller with integrated Wi-Fi and Bluetooth modules, supporting wireless data transmission and remote alarm functions. It features improved processing performance to steadily drive sensors, LED rings and other peripherals.</p>
+                    <p>It inherits the classic UNO pin design and is fully compatible with common Arduino modules and codes. The board supports USB and external DC power supply, with simple wiring and onboard indicators for convenient debugging. Compact and stable, it is well suited for developing indoor auxiliary warning devices.</p>
+                </div>
+
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image222/2-5.png" alt="Arduino UNO R4 Wifi" class="step-image">
+                        <p class="image-caption">图片 2-5</p>
                     </div>
-                    <div class="project-meta">
-                        <span class="meta-label">Source:</span>
-                        <span class="meta-value">Core77 Design Awards 2023</span>
+                    
+                    <div class="image-card">
+                        <img src="image222/2-6.png" alt="Arduino UNO R4 Wifi" class="step-image">
+                        <p class="image-caption">图片 2-6</p>
                     </div>
                 </div>
 
                 <div class="project-description">
-                    <p>Alzheimer's disease (CTAD) is spreading at an alarming rate, seriously affecting the well-being of patients and their families. Sufferers gradually lose their memories bit by bit. Even for those who do not develop Alzheimer's, most elderly people will experience memory decline as they age.</p>
-                    
-                    <p>This project aims to help seniors preserve their memories before the onset of Alzheimer's or age-related memory loss. MemoBox can record both recent events and memories from the distant past. In fact, many elderly people are eager to share their life stories with others.</p>
-                    
-                    <p>Overall, MemoBox offers seniors a simple, intuitive and dignified way to document their memories. It is a product-service system consisting of a main device, guide cards, memory cards and a companion app — the app is exclusively for family members to place orders and play back audio recordings. No digital interfaces are adopted across the system except for the app, making it extremely easy for the elderly to learn and operate.</p>
-                    
-                    <p>Seniors can record and share their stories via MemoBox, which brings them a strong sense of accomplishment and self-worth. When their memory fades over time, they can revisit these recorded stories to reconnect with their life and identity. Meanwhile, family members can also learn more about the elders' life experiences through MemoBox, effectively strengthening family communication and bonds.</p>
+                    <p><strong>Arduino UNO R4 Wifi RA4M1 datasheet:</strong></p>
+                    <p><a href="https://docs.arduino.cc/resources/datasheets/ABX00087-datasheet.pdf" target="_blank" style="color: var(--white); text-decoration: underline;">https://docs.arduino.cc/resources/datasheets/ABX00087-datasheet.pdf</a></p>
                 </div>
 
-                <div class="project-analysis">
-                    <h4 class="analysis-title">Advantages</h4>
-                    <ol class="analysis-list">
-                        <li><strong>Low learning curve & easy to use:</strong> Free of digital interfaces, it is simple and intuitive for the elderly to operate.</li>
-                        <li><strong>Respectful and emotionally supportive:</strong> It records memories through story-sharing rather than medical intervention, bringing seniors a sense of achievement and self-worth.</li>
-                        <li><strong>Value for multiple users:</strong> It helps elders preserve memories and allows family members to learn more about their seniors and enhance family communication.</li>
-                        <li><strong>Preventive intervention:</strong> It takes effect at the early stage of Alzheimer's disease or memory decline to retain life memories.</li>
-                    </ol>
-
-                    <h4 class="analysis-title">Disadvantages</h4>
-                    <ol class="analysis-list">
-                        <li><strong>Reliance on recognition accuracy:</strong> Errors in object identification or memory matching may undermine the elderly users' confidence.</li>
-                        <li><strong>High long-term maintenance costs:</strong> Regular replacements of consumables like memory cards and guide cards, plus potential device malfunctions and upkeep issues.</li>
-                        <li><strong>Limited functionality:</strong> It only focuses on memory recording and cannot intervene in or slow down memory loss.</li>
-                        <li><strong>Privacy and data risks:</strong> Audio recordings and family sharing features on the app may lead to privacy leakage.</li>
-                    </ol>
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image222/2-7.png" alt="Arduino UNO R4 Wifi Datasheet" class="step-image">
+                        <p class="image-caption">图片 2-7</p>
+                    </div>
                 </div>
             </div>
 
             <div class="step-content-block">
-                <h3 class="content-subtitle">02. Dementia Pill Reminder Box</h3>
+                <h3 class="content-subtitle">Case 1: Mijia Ziqiang Human Presence Sensor</h3>
                 
-                <div class="step-images centered">
-                    <div class="image-card">
-                        <img src="image222/2-5.jpg" alt="Dementia Pill Reminder Box" class="step-image">
-                        <p class="image-caption">图片 2-5</p>
-                    </div>
-                </div>
-
-                <div class="project-details">
-                    <h4 class="detail-subtitle">Applicable Users</h4>
-                    <p class="detail-text">People with Alzheimer's disease, memory loss and cognitive impairment.</p>
-
-                    <h4 class="detail-subtitle">Functions (Well-matched to actual needs)</h4>
-                    <ul class="function-list">
-                        <li>Automatically lights up and sounds a buzzer at preset times to remind users to take medicine.</li>
-                        <li>The alert stops only when the medicine box is opened.</li>
-                        <li>Large buttons and simple operations, easy for the elderly to use.</li>
-                        <li>Precise timekeeping; time data won't be lost after power failure (equipped with RTC module).</li>
-                        <li>Simple structure and low cost; can be made via 3D printing or with paper boxes.</li>
-                    </ul>
-                </div>
-
-                <div class="step-images centered">
-                    <div class="image-card">
-                        <img src="image222/2-6.png" alt="Pill Reminder Box 细节图1" class="step-image">
-                        <p class="image-caption">图片 2-6</p>
-                    </div>
-                    
-                    <div class="image-card">
-                        <img src="image222/2-7.png" alt="Pill Reminder Box 细节图2" class="step-image">
-                        <p class="image-caption">图片 2-7</p>
-                    </div>
+                <div class="project-description">
+                    <p>This smart home sensor is equipped with a 24GHz millimeter-wave radar, which can accurately identify both moving and stationary people. It can be attached to table corners, cabinet edges and other hazardous areas. After connecting to smart lights via the smart home system, it will activate lighting reminders automatically when people approach within the preset range.</p>
                 </div>
 
                 <div class="project-analysis">
-                    <h4 class="analysis-title">Project Advantages</h4>
-                    <p class="analysis-text">Extremely simple to operate, ideal for people with cognitive impairment. Audio and light reminders ensure medication is not missed. The alert only stops when the box is opened, preventing repeated dosing. Fully open-source, with low-cost hardware and easy to replicate. Built-in real-time clock, so time remains accurate after power loss.</p>
+                    <h4 class="analysis-title">Advantages</h4>
+                    <p class="analysis-text">It is fixed on-site instead of being worn on the body, so people with cognitive impairment will not resist or forget to use it. The device achieves effective indoor anti-collision protection by triggering lights according to sensing distance.</p>
 
-                    <h4 class="analysis-title">Project Disadvantages</h4>
-                    <p class="analysis-text">Batteries need regular replacement. No automatic network connection; time must be set manually. Functions are basic with no data recording feature.</p>
+                    <h4 class="analysis-title">Disadvantages</h4>
+                    <p class="analysis-text">The millimeter-wave radar has low accuracy in short-distance detection and is vulnerable to external interference. It offers few customizable functions and costs more. Meanwhile, it only supports basic lighting modes without dynamic visual effects.</p>
+                </div>
+
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image222/2-8.jpg" alt="Mijia Ziqiang Human Presence Sensor" class="step-image">
+                        <p class="image-caption">图片 2-8</p>
+                    </div>
+                    
+                    <div class="image-card">
+                        <img src="image222/2-9.jpg" alt="Mijia Ziqiang Human Presence Sensor" class="step-image">
+                        <p class="image-caption">图片 2-9</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Case 2: WAYHOME Project</h3>
+                
+                <div class="project-description">
+                    <p>WAYHOME is a complete care solution for dementia patients and their caregivers. It consists of lightweight GPS wristbands for users and a supporting positioning management system. The system can set virtual safety zones and send remote alarms once users go out of bounds to prevent them from getting lost outdoors.</p>
+                </div>
+
+                <div class="project-analysis">
+                    <h4 class="analysis-title">Advantages</h4>
+                    <p class="analysis-text">The design considers the experience of both patients and caregivers. It adopts the logic of distance threshold judgment to realize early risk warning, and the portable wristband will not bring too much visual burden to users.</p>
+
+                    <h4 class="analysis-title">Disadvantages</h4>
+                    <p class="analysis-text">Patients may take off or refuse to wear the wristband, leading to device failure. Besides, it only sends remote messages to caregivers and cannot provide instant on-site reminders, so it cannot prevent collision injuries immediately when users get close to dangerous objects.</p>
+                </div>
+
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image222/2-10.jpg" alt="WAYHOME Project" class="step-image">
+                        <p class="image-caption">图片 2-10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">CODE</span>
+                <h2 class="step-title">Input Code</h2>
+                <p class="step-desc">输入代码 - HC-SR04 + WS2812 LED Ring</p>
+            </div>
+
+            <div class="code-block">
+                <pre><code class="language-cpp">#include &lt;Adafruit_NeoPixel.h&gt;
+
+// Ultrasonic sensor pin definition
+const int trigPin = 9;
+const int echoPin = 10;
+long echoTime;
+int distance;
+const int dangerDistance = 30; // Danger distance threshold (unit: cm)
+
+// WS2812 LED ring configuration
+#define LED_PIN 6
+#define LED_NUM 12  // Modify according to the actual number of LEDs on your ring
+Adafruit_NeoPixel ring(LED_NUM, LED_PIN, NEO_GRB + NEO_KHZ800);
+
+void setup() {
+  // Initialize ultrasonic sensor
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  Serial.begin(9600);
+
+  // Initialize LED ring
+  ring.begin();
+  ring.clear();
+  ring.show();
+}
+
+void loop() {
+  // Ultrasonic ranging
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  echoTime = pulseIn(echoPin, HIGH);
+  distance = echoTime * 0.034 / 2;
+
+  Serial.print("Current Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  // Judge whether entering the dangerous area
+  if (distance &lt; dangerDistance) {
+    colorRotate(); // Activate colorful rotating warning effect
+  } else {
+    ring.clear();  // Turn off the light ring in safe status
+    ring.show();
+  }
+
+  delay(80);
+}
+
+// Color rotating effect function
+void colorRotate() {
+  uint32_t color;
+  // Traverse each LED to realize rotating effect by color offset
+  for (int i = 0; i &lt; LED_NUM; i++) {
+    ring.clear();
+    // Cycle rainbow colors
+    color = ring.ColorHSV((i * 65536L / LED_NUM), 255, 255);
+    ring.setPixelColor(i, color);
+    ring.setPixelColor((i + 1) % LED_NUM, ring.ColorHSV(((i + 1) * 65536L / LED_NUM), 255, 180));
+    ring.show();
+    delay(30); // Smaller value means faster rotation
+  }
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">DIAGRAM</span>
+                <h2 class="step-title">Circuit Simulation Diagram</h2>
+                <p class="step-desc">电路仿真图</p>
+            </div>
+
+            <div class="step-images centered">
+                <div class="image-card">
+                    <img src="image222/2-11.png" alt="Circuit Simulation Diagram" class="step-image">
+                    <p class="image-caption">电路仿真示意图</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">DEMO</span>
+                <h2 class="step-title">Physical Device Demonstration Diagram</h2>
+                <p class="step-desc">实物设备演示图</p>
+            </div>
+
+            <div class="step-images centered">
+                <div class="image-card">
+                    <img src="image222/2-12.png" alt="Physical Device Demonstration" class="step-image">
+                    <p class="image-caption">实物设备演示图</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">OUTPUT</span>
+                <h2 class="step-title">Output Part</h2>
+                <p class="step-desc">输出部分 - WS2812 LED Ring</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Introduction to WS2812 LED Ring</h3>
+                
+                <div class="project-description">
+                    <p>The WS2812 LED ring is a programmable annular light module with an integrated driver IC. Using single-bus control, each LED supports independent RGB color and brightness adjustment, creating various dynamic light effects.</p>
+                    <p>It uses only one data wire for easy wiring and pin saving, and works perfectly with Arduino boards. Powered by 5V, the module is compact and energy-efficient. When paired with the HC-SR04 sensor, it activates vivid rotating color lights as a visual warning when people get close to hazards.</p>
+                    <p>Easy to mount on table corners and cabinet edges, this affordable module is well suited for building auxiliary warning devices for people with cognitive impairment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-images centered">
+                <div class="image-card">
+                    <img src="image222/2-13.jpg" alt="WS2812 LED Ring" class="step-image">
+                    <p class="image-caption">WS2812 LED 环形灯模块</p>
                 </div>
             </div>
         </div>
@@ -390,5 +510,8 @@ NEW_FILE_CODE
             }
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
 </body>
 </html>
