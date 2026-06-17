@@ -1429,6 +1429,32 @@ body {
     margin: 12px 0;
 }
 
+/* Code Block Styles */
+.code-block {
+    margin: 40px 0;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--gray-800);
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.code-block pre {
+    margin: 0;
+    padding: 30px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    background: #2d2d2d;
+}
+
+.code-block code {
+    display: block;
+    color: inherit;
+}
+
 /* IoT Interaction Page Styles */
 .architecture-layers {
     margin: 40px 0;

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Management - 这是啥组</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
@@ -200,45 +201,240 @@
                 <p>Here is the code for the home page</p>
             </div>
 
-            <div class="step-images">
-                <div class="image-card">
-                    <img src="image111/1-19.png" alt="首页代码1" class="step-image">
-                    <p class="image-caption">图片 1-19</p>
-                </div>
-                
-                <div class="image-card">
-                    <img src="image111/1-20.png" alt="首页代码2" class="step-image">
-                    <p class="image-caption">图片 1-20</p>
-                </div>
-                
-                <div class="image-card">
-                    <img src="image111/1-21.png" alt="首页代码3" class="step-image">
-                    <p class="image-caption">图片 1-21</p>
-                </div>
-            </div>
+            <div class="code-block">
+                <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;这是啥组 - 艺术与科技&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;nav class="navbar"&gt;
+        &lt;div class="nav-container"&gt;
+            &lt;a href="index.html" class="nav-logo"&gt;这是啥组&lt;/a&gt;
+            &lt;ul class="nav-menu"&gt;
+                &lt;li&gt;&lt;a href="#home"&gt;首页&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#members"&gt;成员&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#works"&gt;作业&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#final"&gt;期末作品&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
 
-            <div class="step-images">
-                <div class="image-card">
-                    <img src="image111/1-22.png" alt="首页代码4" class="step-image">
-                    <p class="image-caption">图片 1-22</p>
-                </div>
-                
-                <div class="image-card">
-                    <img src="image111/1-23.png" alt="首页代码5" class="step-image">
-                    <p class="image-caption">图片 1-23</p>
-                </div>
-                
-                <div class="image-card">
-                    <img src="image111/1-24.png" alt="首页代码6" class="step-image">
-                    <p class="image-caption">图片 1-24</p>
-                </div>
-            </div>
+    &lt;section class="hero" id="home"&gt;
+        &lt;div class="hero-content"&gt;
+            &lt;h1 class="hero-title"&gt;这是啥组&lt;/h1&gt;
+            &lt;p class="hero-subtitle"&gt;艺术与科技专业&lt;/p&gt;
+            &lt;div class="hero-line"&gt;&lt;/div&gt;
+            &lt;div class="hero-buttons"&gt;
+                &lt;a href="#members" class="btn btn-outline"&gt;探索团队&lt;/a&gt;
+                &lt;a href="#works" class="btn btn-outline"&gt;查看作品&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="hero-decoration"&gt;
+            &lt;div class="geo-cross geo-cross-1"&gt;&lt;/div&gt;
+            &lt;div class="geo-cross geo-cross-2"&gt;&lt;/div&gt;
+            &lt;div class="geo-cross geo-cross-3"&gt;&lt;/div&gt;
+            &lt;div class="geo-diamond geo-diamond-1"&gt;&lt;/div&gt;
+            &lt;div class="geo-diamond geo-diamond-2"&gt;&lt;/div&gt;
+            &lt;div class="geo-diamond geo-diamond-3"&gt;&lt;/div&gt;
+            &lt;div class="geo-circle geo-circle-1"&gt;&lt;/div&gt;
+            &lt;div class="geo-circle geo-circle-2"&gt;&lt;/div&gt;
+            &lt;div class="geo-circle geo-circle-3"&gt;&lt;/div&gt;
+            &lt;div class="geo-square geo-square-1"&gt;&lt;/div&gt;
+            &lt;div class="geo-square geo-square-2"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
 
-            <div class="step-images">
-                <div class="image-card">
-                    <img src="image111/1-25.png" alt="首页代码7" class="step-image">
-                    <p class="image-caption">图片 1-25</p>
-                </div>
+    &lt;section class="members" id="members"&gt;
+        &lt;div class="section-header"&gt;
+            &lt;span class="section-number"&gt;01&lt;/span&gt;
+            &lt;h2 class="section-title"&gt;小组成员&lt;/h2&gt;
+            &lt;p class="section-desc"&gt;艺术与科技 · 四人团队&lt;/p&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="member-grid"&gt;
+            &lt;a href="https://clare9901.github.io/Clare111111111new/" target="_blank" class="member-card member-link"&gt;
+                &lt;div class="member-avatar-wrapper"&gt;
+                    &lt;img src="images/avatar1.jpg" alt="陈过" class="member-photo"&gt;
+                    &lt;div class="avatar-frame"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="member-info"&gt;
+                    &lt;h3 class="member-name"&gt;陈过&lt;/h3&gt;
+                    &lt;p class="member-id"&gt;2024014742&lt;/p&gt;
+                    &lt;p class="member-major"&gt;艺术与科技&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+
+            &lt;a href="https://mtttttt12.github.io/Cai-aomi/" target="_blank" class="member-card member-link"&gt;
+                &lt;div class="member-avatar-wrapper"&gt;
+                    &lt;img src="images/avatar2.jpg" alt="蔡奥秘" class="member-photo"&gt;
+                    &lt;div class="avatar-frame"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="member-info"&gt;
+                    &lt;h3 class="member-name"&gt;蔡奥秘&lt;/h3&gt;
+                    &lt;p class="member-id"&gt;2024014745&lt;/p&gt;
+                    &lt;p class="member-major"&gt;艺术与科技&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+
+            &lt;a href="https://2024014735caiyitong.github.io/Cai-Yitong/" target="_blank" class="member-card member-link"&gt;
+                &lt;div class="member-avatar-wrapper"&gt;
+                    &lt;img src="images/avatar3.jpg" alt="蔡仪彤" class="member-photo"&gt;
+                    &lt;div class="avatar-frame"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="member-info"&gt;
+                    &lt;h3 class="member-name"&gt;蔡仪彤&lt;/h3&gt;
+                    &lt;p class="member-id"&gt;2024014735&lt;/p&gt;
+                    &lt;p class="member-major"&gt;艺术与科技&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+
+            &lt;a href="https://2024014747.github.io/wyh-web/" target="_blank" class="member-card member-link"&gt;
+                &lt;div class="member-avatar-wrapper"&gt;
+                    &lt;img src="images/avatar4.jpg" alt="王昱涵" class="member-photo"&gt;
+                    &lt;div class="avatar-frame"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="member-info"&gt;
+                    &lt;h3 class="member-name"&gt;王昱涵&lt;/h3&gt;
+                    &lt;p class="member-id"&gt;2024014747&lt;/p&gt;
+                    &lt;p class="member-major"&gt;艺术与科技&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="works" id="works"&gt;
+        &lt;div class="section-header"&gt;
+            &lt;span class="section-number"&gt;02&lt;/span&gt;
+            &lt;h2 class="section-title"&gt;作业展示&lt;/h2&gt;
+            &lt;p class="section-desc"&gt;课程项目与学习成果&lt;/p&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="works-list"&gt;
+            &lt;a href="project-management.html" class="work-item work-link"&gt;
+                &lt;span class="work-number"&gt;01&lt;/span&gt;
+                &lt;h3 class="work-title"&gt;Project Management&lt;/h3&gt;
+                &lt;p class="work-desc"&gt;项目管理&lt;/p&gt;
+            &lt;/a&gt;
+
+            &lt;a href="arduino-output.html" class="work-item work-link"&gt;
+                &lt;span class="work-number"&gt;02&lt;/span&gt;
+                &lt;h3 class="work-title"&gt;Arduino&lt;/h3&gt;
+                &lt;p class="work-desc"&gt;Arduino 输出&lt;/p&gt;
+            &lt;/a&gt;
+
+            &lt;div class="work-item"&gt;
+                &lt;span class="work-number"&gt;03&lt;/span&gt;
+                &lt;h3 class="work-title"&gt;Material&lt;/h3&gt;
+                &lt;p class="work-desc"&gt;材料&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class="work-item"&gt;
+                &lt;span class="work-number"&gt;04&lt;/span&gt;
+                &lt;h3 class="work-title"&gt;Computer aided design&lt;/h3&gt;
+                &lt;p class="work-desc"&gt;计算机辅助设计&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class="work-item"&gt;
+                &lt;span class="work-number"&gt;05&lt;/span&gt;
+                &lt;h3 class="work-title"&gt;3D Printer&lt;/h3&gt;
+                &lt;p class="work-desc"&gt;3D 打印&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;a href="iot.html" class="work-item work-link"&gt;
+                &lt;span class="work-number"&gt;06&lt;/span&gt;
+                &lt;h3 class="work-title"&gt;Arduino IOT&lt;/h3&gt;
+                &lt;p class="work-desc"&gt;物联网与交互&lt;/p&gt;
+            &lt;/a&gt;
+
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="final-work" id="final"&gt;
+        &lt;div class="section-header"&gt;
+            &lt;span class="section-number"&gt;03&lt;/span&gt;
+            &lt;h2 class="section-title"&gt;Final Work&lt;/h2&gt;
+            &lt;p class="section-desc"&gt;期末综合创作项目&lt;/p&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="final-grid"&gt;
+            &lt;div class="final-card"&gt;
+                &lt;div class="final-image-wrapper"&gt;
+                    &lt;img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=1200&amp;h=600&amp;fit=crop" alt="期末作品主视觉"&gt;
+                    &lt;div class="final-overlay"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="final-content"&gt;
+                    &lt;span class="final-category"&gt;综合项目&lt;/span&gt;
+                    &lt;h3 class="final-title"&gt;艺术与科技的融合探索&lt;/h3&gt;
+                    &lt;p class="final-team"&gt;团队：陈过 / 蔡奥秘 / 蔡仪彤 / 王昱涵&lt;/p&gt;
+                    &lt;p class="final-desc"&gt;本学期期末综合创作项目，整合艺术与科技专业知识，通过多媒体、交互设计和数字技术，探索当代艺术表达的新可能性。项目融合了视觉艺术、声音设计、互动体验和数字媒体等多种元素。&lt;/p&gt;
+                    &lt;div class="final-tags"&gt;
+                        &lt;span class="final-tag"&gt;交互设计&lt;/span&gt;
+                        &lt;span class="final-tag"&gt;数字媒体&lt;/span&gt;
+                        &lt;span class="final-tag"&gt;视觉艺术&lt;/span&gt;
+                        &lt;span class="final-tag"&gt;创新实验&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;footer class="footer"&gt;
+        &lt;div class="footer-line"&gt;&lt;/div&gt;
+        &lt;div class="footer-content"&gt;
+            &lt;p class="footer-text"&gt;&amp;copy; 2026 这是啥组&lt;/p&gt;
+            &lt;p class="footer-subtext"&gt;艺术与科技专业&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;script&gt;
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) =&gt; {
+            entries.forEach(entry =&gt; {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.member-card, .work-item, .final-card').forEach(el =&gt; {
+            observer.observe(el);
+        });
+
+        window.addEventListener('scroll', () =&gt; {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY &gt; 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor =&gt; {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
             </div>
         </div>
     </section>
@@ -253,95 +449,168 @@
 
             <div class="step-description">
                 <p>Here is a personal introduction (take one person as an example)</p>
+                <p>Link: <a href="https://2024014735caiyitong.github.io/Cai-Yitong/" target="_blank" style="color: var(--white); text-decoration: underline;">https://2024014735caiyitong.github.io/Cai-Yitong/</a></p>
             </div>
 
-            <div class="step-images">
-                <div class="image-card">
-                    <img src="image111/1-26.png" alt="个人介绍1" class="step-image">
-                    <p class="image-caption">图片 1-26</p>
-                </div>
-                
-                <div class="image-card">
-                    <img src="image111/1-27.png" alt="个人介绍2" class="step-image">
-                    <p class="image-caption">图片 1-27</p>
-                </div>
-                
-                <div class="image-card">
-                    <img src="image111/1-28.png" alt="个人介绍3" class="step-image">
-                    <p class="image-caption">图片 1-28</p>
-                </div>
-            </div>
+            <div class="code-block">
+                <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;蔡仪彤个人主页&lt;/title&gt;
+&lt;link rel="stylesheet" href="style.css"&gt;
+&lt;link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;circle cx='50' cy='50' r='40' fill='%23FFA500'/&gt;&lt;/svg&gt;" type="image/svg+xml"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- 背景圆点 --&gt;
+&lt;div class="dots-container" id="dotsContainer"&gt;&lt;/div&gt;
 
-            <div class="step-images">
-                <div class="image-card">
-                    <img src="image111/1-29.png" alt="个人介绍4" class="step-image">
-                    <p class="image-caption">图片 1-29</p>
-                </div>
-                
-                <div class="image-card">
-                    <img src="image111/1-30.png" alt="个人介绍5" class="step-image">
-                    <p class="image-caption">图片 1-30</p>
-                </div>
-            </div>
-        </div>
-    </section>
+&lt;!-- 主卡片 --&gt;
+&lt;div class="card"&gt;
+&lt;!-- 板块1 基本信息 --&gt;
+&lt;div class="info-section"&gt;
+&lt;div class="label"&gt;&lt;span class="name-color"&gt;蔡仪彤&lt;/span&gt;&lt;/div&gt;
+&lt;div class="content"&gt;
+艺术与科技在读，专注动态视觉与交互创作，擅长平面设计、简易硬件编程。
+&lt;/div&gt;
+&lt;!-- 个人头像位置 --&gt;
+&lt;div class="avatar-box"&gt;
+&lt;img src="https://picsum.photos/id/65/150/150" alt="个人头像" class="avatar-img"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-    <section class="pm-section">
-        <div class="pm-step">
-            <div class="step-header">
-                <span class="step-number">06</span>
-                <h2 class="step-title">CSS Code</h2>
-                <p class="step-desc">CSS样式代码</p>
-            </div>
+&lt;!-- 板块2 项目作品 --&gt;
+&lt;div class="card-wrap"&gt;
+&lt;div class="section-title"&gt;项目实践｜Work Projects&lt;/div&gt;
+&lt;div class="content-text"&gt;
+&lt;!-- 项目预览图片区 --&gt;
+&lt;div class="project-img-group"&gt;
+&lt;img src="https://picsum.photos/id/28/220/150" alt="硬件装置作品" class="pro-img"&gt;
+&lt;img src="https://picsum.photos/id/62/220/150" alt="国风平面作品" class="pro-img"&gt;
+&lt;img src="https://picsum.photos/id/96/220/150" alt="动态视觉作品" class="pro-img"&gt;
+&lt;/div&gt;
 
-            <div class="step-description">
-                <p>And the css</p>
-            </div>
+&lt;div class="item-box"&gt;
+&lt;div class="item-icon"&gt;💡&lt;/div&gt;
+&lt;div class="item-text"&gt;
+&lt;strong&gt;交互硬件装置&lt;/strong&gt;&lt;br&gt;基于Arduino开发光影交互装置，实现硬件联动动态灯光视觉
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="item-box"&gt;
+&lt;div class="item-icon"&gt;🎨&lt;/div&gt;
+&lt;div class="item-text"&gt;
+&lt;strong&gt;视觉平面创作&lt;/strong&gt;&lt;br&gt;国风纹样设计、动态海报、品牌版式视觉等平面类原创设计
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="item-box"&gt;
+&lt;div class="item-icon"&gt;🎬&lt;/div&gt;
+&lt;div class="item-text"&gt;
+&lt;strong&gt;数字动态视觉&lt;/strong&gt;&lt;br&gt;AE动态插画、短视频视觉包装、个人定制静态网页开发
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-            <div class="step-images">
-                <div class="image-card">
-                    <img src="image111/1-31.png" alt="CSS代码1" class="step-image">
-                    <p class="image-caption">图片 1-31</p>
-                </div>
-                
-                <div class="image-card">
-                    <img src="image111/1-32.png" alt="CSS代码2" class="step-image">
-                    <p class="image-caption">图片 1-32</p>
-                </div>
-                
-                <div class="image-card">
-                    <img src="image111/1-33.png" alt="CSS代码3" class="step-image">
-                    <p class="image-caption">图片 1-33</p>
-                </div>
-            </div>
+&lt;!-- 板块3 专业技能 --&gt;
+&lt;div class="card-wrap"&gt;
+&lt;div class="section-title"&gt;专业技能｜Skills&lt;/div&gt;
+&lt;div class="content-text"&gt;
+&lt;div class="item-box"&gt;
+&lt;div class="item-icon"&gt;🖼️&lt;/div&gt;
+&lt;div class="item-text"&gt;&lt;strong&gt;视觉设计类&lt;/strong&gt;&lt;br&gt;PS/AI/AE动态制作、版式排版、传统纹样设计、新媒体视觉&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="item-box"&gt;
+&lt;div class="item-icon"&gt;⚙️&lt;/div&gt;
+&lt;div class="item-text"&gt;&lt;strong&gt;硬件编程类&lt;/strong&gt;&lt;br&gt;Arduino单片机、基础电路搭建、实物交互作品调试&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="item-box"&gt;
+&lt;div class="item-icon"&gt;💻&lt;/div&gt;
+&lt;div class="item-text"&gt;&lt;strong&gt;前端开发&lt;/strong&gt;&lt;br&gt;静态网页制作、页面动效、页面自适应布局编写&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-            <div class="step-images">
-                <div class="image-card">
-                    <img src="image111/1-34.png" alt="CSS代码4" class="step-image">
-                    <p class="image-caption">图片 1-34</p>
-                </div>
-                
-                <div class="image-card">
-                    <img src="image111/1-35.png" alt="CSS代码5" class="step-image">
-                    <p class="image-caption">图片 1-35</p>
-                </div>
-                
-                <div class="image-card">
-                    <img src="image111/1-36.png" alt="CSS代码6" class="step-image">
-                    <p class="image-caption">图片 1-36</p>
-                </div>
-            </div>
+&lt;!-- 板块4 日常爱好 --&gt;
+&lt;div class="card-wrap"&gt;
+&lt;div class="section-title"&gt;日常热爱｜Hobbies&lt;/div&gt;
+&lt;div class="content-text"&gt;
+&lt;!-- 爱好配图 --&gt;
+&lt;div class="hobby-img-box"&gt;
+&lt;img src="https://picsum.photos/id/36/180/120" alt="摄影" class="hobby-img"&gt;
+&lt;/div&gt;
+&lt;div class="item-box"&gt;
+&lt;div class="item-icon"&gt;📷&lt;/div&gt;
+&lt;div class="item-text"&gt;&lt;strong&gt;摄影创作&lt;/strong&gt;&lt;br&gt;纪实人像、风光拍摄，钻研数码与胶片摄影、构图光影学习&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="item-box"&gt;
+&lt;div class="item-icon"&gt;🏺&lt;/div&gt;
+&lt;div class="item-text"&gt;&lt;strong&gt;艺术研学&lt;/strong&gt;&lt;br&gt;文博古迹鉴赏、中外美术赏析、传统非遗纹样考据、舞剧观赏&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="item-box"&gt;
+&lt;div class="item-icon"&gt;📖&lt;/div&gt;
+&lt;div class="item-text"&gt;&lt;strong&gt;课余提升&lt;/strong&gt;&lt;br&gt;多国语言自学、设计类书籍与艺术文献阅览&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-            <div class="step-images">
-                <div class="image-card">
-                    <img src="image111/1-37.png" alt="CSS代码7" class="step-image">
-                    <p class="image-caption">图片 1-37</p>
-                </div>
-                
-                <div class="image-card">
-                    <img src="image111/1-38.png" alt="CSS代码8" class="step-image">
-                    <p class="image-caption">图片 1-38</p>
-                </div>
+&lt;!-- 板块5 学习履历 --&gt;
+&lt;div class="card-wrap"&gt;
+&lt;div class="section-title"&gt;学习履历｜About Study&lt;/div&gt;
+&lt;div class="content-text"&gt;
+艺术与科技专业在读，研究方向为传统国风文化+数字交互跨界创作，在校持续落地小型交互实物项目与原创视觉作品，不断拓展设计与硬件结合的创作边界。
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 板块6 底部联络 --&gt;
+&lt;div class="card-wrap"&gt;
+&lt;div class="section-title"&gt;联络我｜Contact Me&lt;/div&gt;
+&lt;div class="content-text"&gt;
+合作约稿、设计定制、项目交流均可邮件联系&lt;br&gt;
+邮箱：&lt;a href="mailto:xxx_design@outlook.com"&gt;xxx_design@outlook.com&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// 生成随机彩色圆点
+function createDots() {
+const container = document.getElementById('dotsContainer');
+const colors = ['#FF1744', '#00E5FF', '#FFD600', '#00E676', '#FF9100', '#D500F9', '#FF4081', '#00B0FF'];
+const dotCount = 47; // 圆点数量
+
+for (let i = 0; i &lt; dotCount; i++) {
+const dot = document.createElement('div');
+dot.className = 'dot';
+
+// 随机大小 (8-30px)
+const size = Math.random() * 22 + 8;
+dot.style.width = size + 'px';
+dot.style.height = size + 'px';
+
+// 随机位置
+dot.style.left = Math.random() * 100 + '%';
+dot.style.top = Math.random() * 100 + '%';
+
+// 随机颜色
+const color = colors[Math.floor(Math.random() * colors.length)];
+dot.style.backgroundColor = color;
+
+// 随机动画时长和延迟 (8-15秒)
+const duration = Math.random() * 7 + 8;
+const delay = Math.random() * 5;
+dot.style.animationDuration = duration + 's';
+dot.style.animationDelay = delay + 's';
+
+container.appendChild(dot);
+}
+}
+
+// 页面加载时创建圆点
+window.addEventListener('load', createDots);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
             </div>
         </div>
     </section>
@@ -381,5 +650,9 @@
             }
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 </body>
 </html>
