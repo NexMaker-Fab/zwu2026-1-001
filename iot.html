@@ -1,4 +1,3 @@
-NEW_FILE_CODE
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -25,8 +24,8 @@ NEW_FILE_CODE
 
     <section class="pm-hero">
         <div class="pm-content">
-            <h1 class="pm-title">Arduino IOT</h1>
-            <p class="pm-subtitle">物联网交互 · 智能安全距离预警装置</p>
+            <h1 class="pm-title">Bengbu Mixiaoting Xiaomi Smart Talent Apartment</h1>
+            <p class="pm-subtitle">Full IoT Process · 物联网与交互</p>
             <div class="pm-line"></div>
         </div>
     </section>
@@ -34,15 +33,13 @@ NEW_FILE_CODE
     <section class="pm-section">
         <div class="pm-step">
             <div class="step-header">
-                <span class="step-number">INTRO</span>
+                <span class="step-number">OVERVIEW</span>
                 <h2 class="step-title">Project Overview</h2>
                 <p class="step-desc">项目概述</p>
             </div>
 
             <div class="step-description">
-                <p>This project is a home-based intelligent safety protection IoT device designed for elderly people with mild cognitive impairment. Different from traditional single sensor devices, it constructs a complete edge-side IoT interaction closed loop: environmental perception → data operation → intelligent judgment → human-computer interaction → state self-reset.</p>
-                
-                <p>With Arduino UNO as the main control core, the device collects environmental data through ultrasonic sensors and completes risk judgment via local intelligent algorithms. It finally realizes low-stimulation human-computer interaction through screen visualization and dynamic light prompts, operating fully automatically without manual supervision.</p>
+                <p>Mixiaoting located in China Sensing Valley, Bengbu consists of 6 buildings with 2,000 talent apartments (single/double/four-person units). It integrates three layers: community public-area IoT, in-unit whole-house IoT and property cloud management platform. Adopting Xiaomi IoT enterprise architecture, it combines local gateway edge computing, Xiaomi public cloud and private property management backend. Communication protocols include Zigbee3.0, BLE Mesh, WiFi, Ethernet and LoRa (for public security).</p>
             </div>
         </div>
     </section>
@@ -50,47 +47,27 @@ NEW_FILE_CODE
     <section class="pm-section">
         <div class="pm-step">
             <div class="step-header">
-                <span class="step-number">01</span>
-                <h2 class="step-title">Overall IoT Interaction Architecture</h2>
-                <p class="step-desc">整体物联网交互架构</p>
-            </div>
-
-            <div class="step-description">
-                <p>As a lightweight edge-side intelligent IoT interaction system, the device consists of four layers: the perception collection layer, the core operation layer, the interaction execution layer, and the state reset layer.</p>
-                
-                <p>The coordinated operation of all layers realizes fully automatic interaction from environmental data collection to intelligent feedback without manual intervention, which is suitable for long-term standby monitoring in home scenarios.</p>
+                <span class="step-number">I</span>
+                <h2 class="step-title">Overall Three-Layer IoT Hardware Architecture</h2>
+                <p class="step-desc">整体三层物联网硬件架构（感知层-网络层-平台应用层）</p>
             </div>
 
             <div class="step-content-block">
-                <div class="architecture-layers">
-                    <div class="layer-item">
-                        <span class="layer-number">01</span>
-                        <div class="layer-content">
-                            <h4 class="layer-title">Perception Collection Layer</h4>
-                            <p class="layer-desc">感知采集层 - 环境数据实时收集</p>
-                        </div>
-                    </div>
-                    <div class="layer-item">
-                        <span class="layer-number">02</span>
-                        <div class="layer-content">
-                            <h4 class="layer-title">Core Operation Layer</h4>
-                            <p class="layer-desc">核心运算层 - 智能数据判断与状态识别</p>
-                        </div>
-                    </div>
-                    <div class="layer-item">
-                        <span class="layer-number">03</span>
-                        <div class="layer-content">
-                            <h4 class="layer-title">Interaction Execution Layer</h4>
-                            <p class="layer-desc">交互执行层 - 低刺激智能人机反馈</p>
-                        </div>
-                    </div>
-                    <div class="layer-item">
-                        <span class="layer-number">04</span>
-                        <div class="layer-content">
-                            <h4 class="layer-title">State Reset Layer</h4>
-                            <p class="layer-desc">状态重置层 - 自适应闭环调节</p>
-                        </div>
-                    </div>
+                <h3 class="content-subtitle">(1) Public Area Perception Devices</h3>
+                
+                <ol class="device-list">
+                    <li>Building face recognition access control terminal (WiFi+Ethernet): Collect facial data, access records and visitor QR codes</li>
+                    <li>Intelligent elevator call module (LoRa): Receive signals from access control to call target floors</li>
+                    <li>Public area human/illumination sensors, smoke detectors, fire water pressure sensors, corridor smart lighting</li>
+                    <li>Community HD cameras, electronic fence vibration sensors, underground parking geomagnetic detectors</li>
+                    <li>Energy collection terminals for commercial shops, public trash bin fullness sensors</li>
+                </ol>
+            </div>
+
+            <div class="step-images centered">
+                <div class="image-card">
+                    <img src="image666/（图片6-1）.jpg" alt="Public Area Perception Devices" class="step-image">
+                    <p class="image-caption">图片 6-1</p>
                 </div>
             </div>
         </div>
@@ -99,102 +76,235 @@ NEW_FILE_CODE
     <section class="pm-section">
         <div class="pm-step">
             <div class="step-header">
-                <span class="step-number">02</span>
-                <h2 class="step-title">Step-by-Step Complete Interaction Operation Process</h2>
-                <p class="step-desc">分步完整交互操作流程</p>
+                <span class="step-number">II</span>
+                <h2 class="step-title">Pre-operation Full Process: IoT Equipment Initialization Before Check-in</h2>
+                <p class="step-desc">运营前全流程：入住前物联网设备初始化（物业批量部署）</p>
             </div>
 
             <div class="step-content-block">
-                <h3 class="content-subtitle">1. Perception Collection Layer: Real-Time Environmental Data Collection (Input Interaction)</h3>
+                <h3 class="content-subtitle">Step 1: Equipment Embedding During Hard Decoration</h3>
                 
                 <div class="process-description">
-                    <p>After power-on and standby, the HC-SR04 ultrasonic sensor works continuously. It emits ultrasonic signals at a fixed frequency and receives echoes. By calculating the round-trip time of sound waves, it collects real-time distance data between people and dangerous areas such as window sills, stoves and balconies, converts analog physical signals into identifiable digital signals, and transmits the data to the Arduino UNO main control chip in real time.</p>
-                    
-                    <p>As the entry of IoT interaction, this process realizes the conversion from physical environment to digital data, endowing the device with the ability to perceive environmental changes and providing data support for subsequent intelligent judgment.</p>
-                </div>
-            </div>
-
-            <div class="step-content-block">
-                <h3 class="content-subtitle">2. Core Operation Layer: Intelligent Data Judgment and State Identification (Processing Interaction)</h3>
-                
-                <div class="process-description">
-                    <p>The main control chip conducts intelligent logic judgment through built-in program algorithms after receiving real-time distance data, which is the core of the device's intelligence. The system presets two judgment thresholds: a dangerous distance of 60 cm and a dangerous residence time of 3 seconds.</p>
-                    
-                    <p>When the detected distance between the human body and the dangerous area is ≤ 60 cm, the system starts timing and continuously monitors the residence state. If the person does not leave within 3 seconds, the system judges it as a dangerous residence state and triggers an early warning instruction. If the person leaves quickly and the distance returns to the safe range, the system clears the timing data automatically and maintains the safe standby state.</p>
-                    
-                    <p>Different from the single data feedback of traditional sensors, this process realizes active thinking and logical decision-making of IoT devices, avoiding false triggers caused by transient approaching and improving the accuracy of the device.</p>
-                </div>
-
-                <div class="threshold-info">
-                    <div class="threshold-item">
-                        <span class="threshold-label">Dangerous Distance:</span>
-                        <span class="threshold-value">≤ 60 cm</span>
-                    </div>
-                    <div class="threshold-item">
-                        <span class="threshold-label">Dangerous Residence Time:</span>
-                        <span class="threshold-value">≥ 3 seconds</span>
-                    </div>
+                    <p>Reserve network cable power supply in the center of each living room to install Xiaomi Multi-mode Gateway 2; wire zero-fire smart switches all over the house; reserve power supply for curtain motor tracks; embed pipelines for kitchen gas solenoid valves.</p>
+                    <p>Deploy floor switches and public LoRa gateways in building weak current shafts; complete wiring for lobby access control and elevators.</p>
                 </div>
             </div>
 
             <div class="step-content-block">
-                <h3 class="content-subtitle">3. Interaction Execution Layer: Low-Stimulation Intelligent Human-Computer Feedback (Output Interaction)</h3>
+                <h3 class="content-subtitle">Step 2: Batch Network Configuration of Equipment</h3>
                 
                 <div class="process-description">
-                    <p>Once the system identifies a dangerous state, it activates coordinated human-computer interaction of two modules. Adapting to the sensory characteristics of people with cognitive impairment, it adopts gentle intelligent feedback to avoid anxiety and panic caused by harsh alarms of traditional equipment, forming a humanized IoT interaction experience.</p>
+                    <p>Operated by property uniformly, no manual binding for residents. Power on gateways and connect via wired network. The property backend imports room numbers (e.g. Building 1 Room 302, Building 2 Room 501) in batches and binds unique device IDs to each room.</p>
+                    <p>Zigbee sub-devices (sensors, door locks, curtains) access the network in batches, and gateways automatically classify them into corresponding room device groups.</p>
                 </div>
+            </div>
 
-                <div class="feedback-modules">
-                    <div class="feedback-item">
-                        <h4 class="feedback-title">Screen Visual Interaction</h4>
-                        <p class="feedback-desc">The 0.96-inch OLED display immediately refreshes the interface and exits the standby state. It shows the prompt "Please stay away from dangerous areas" in large and concise centered fonts. The intuitive text conforms to the visual habits of the elderly and realizes effective visual safety reminders.</p>
-                    </div>
-
-                    <div class="feedback-item">
-                        <h4 class="feedback-title">Dynamic Light Interaction</h4>
-                        <p class="feedback-desc">The WS2812B light ring starts a warm-yellow breathing gradient effect with gradually changing brightness. The soft and non-glare light provides continuous ambient reminders without noise, achieving low-stimulation long-term safety prompting.</p>
-                    </div>
+            <div class="step-images centered">
+                <div class="image-card">
+                    <img src="image666/（图片6-2）.jpg" alt="Batch Network Configuration" class="step-image">
+                    <p class="image-caption">图片 6-2</p>
                 </div>
             </div>
 
             <div class="step-content-block">
-                <h3 class="content-subtitle">4. State Reset Layer: Adaptive Closed-Loop Regulation (Cyclic Interaction)</h3>
+                <div class="process-description">
+                    <p>WiFi home appliances (speakers, air conditioners, washing machines) connect to community Mesh whole-house WiFi uniformly and bind to corresponding unit numbers automatically.</p>
+                </div>
+            </div>
+
+            <div class="step-images centered">
+                <div class="image-card">
+                    <img src="image666/（图片6-3）.jpg" alt="WiFi Home Appliances Connection" class="step-image">
+                    <p class="image-caption">图片 6-3</p>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <div class="process-description">
+                    <p>Pre-set automation scene templates for all unit types (Homecoming, Leaving, Sleep, Morning Wake-up, Security Alarm) on the backend, and push them to each unit gateway for local storage with one click.</p>
+                    <p>Input public access control, elevator and fire equipment into the community main gateway to build mapping relations between buildings and rooms.</p>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Step 3: Check-in Information Synchronization</h3>
                 
                 <div class="process-description">
-                    <p>The device supports intelligent self-reset and closed-loop regulation. It keeps monitoring the environmental state after triggering early warnings. When the user leaves the dangerous area and the detection distance returns to over 60 cm (safe range), the system clears the timing data, turns off the early warning state, extinguishes the light ring, and restores the screen to the standby interface showing "Safety Monitoring". The device then returns to the normal monitoring mode.</p>
-                    
-                    <p>This layer realizes dynamic state switching and fully automatic cyclic operation. No manual restart or reset is required, enabling 24-hour unattended intelligent safety protection.</p>
+                    <p>Interconnection between Property PMS System and Xiaomi IoT Cloud. Talents complete check-in at the front desk, where staff input names, phone numbers, lease terms and room numbers into the apartment PMS management system.</p>
+                    <p>The PMS system pushes data to Xiaomi IoT enterprise cloud in real time via API interfaces.</p>
                 </div>
+            </div>
 
-                <div class="reset-flow">
-                    <div class="flow-step">
-                        <span class="flow-icon">→</span>
-                        <p>User leaves dangerous area</p>
-                    </div>
-                    <div class="flow-step">
-                        <span class="flow-icon">→</span>
-                        <p>Distance > 60 cm (safe range)</p>
-                    </div>
-                    <div class="flow-step">
-                        <span class="flow-icon">→</span>
-                        <p>System clears timing data</p>
-                    </div>
-                    <div class="flow-step">
-                        <span class="flow-icon">→</span>
-                        <p>Warning state deactivated</p>
-                    </div>
-                    <div class="flow-step">
-                        <span class="flow-icon">→</span>
-                        <p>Light ring extinguished</p>
-                    </div>
-                    <div class="flow-step">
-                        <span class="flow-icon">→</span>
-                        <p>Screen shows "Safety Monitoring"</p>
-                    </div>
-                    <div class="flow-step">
-                        <span class="flow-icon">→</span>
-                        <p>Return to normal monitoring mode</p>
-                    </div>
+            <div class="step-content-block">
+                <div class="process-description">
+                    <p>The cloud automatically completes three tasks:</p>
+                    <ol>
+                        <li>Activate room access authority of Mi Home APP for residents' phone numbers.</li>
+                        <li>Synchronize fingerprint/NFC access permissions to the smart door lock of the corresponding room.</li>
+                        <li>Push personalized basic parameters (default air conditioner temperature, wake-up voice, morning wake-up time).</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="step-images centered">
+                <div class="image-card">
+                    <img src="image666/（图片6-4）.jpg" alt="Check-in Information Synchronization" class="step-image">
+                    <p class="image-caption">图片 6-4</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">III</span>
+                <h2 class="step-title">Complete IoT Data Flow of Core Scenarios</h2>
+                <p class="step-desc">核心场景完整物联网数据流（四个环节：社区通行、室内生活、安全警报、物业运营）</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Link 1: Contactless Access Flow: Community Gate → Elevator → Apartment Door</h3>
+                
+                <div class="process-description">
+                    <p><strong>Residents pass the gate via face recognition:</strong> Cameras at the perception layer capture facial data, and local verification sends access signals to the community main gateway. The cloud matches the resident's apartment number and sends instructions to call the elevator for the target floor.</p>
+                    
+                    <p><strong>Unlock the apartment door with fingerprint or NFC:</strong> The lock sends a door-open signal to the indoor multi-mode gateway, and the local "Home Mode" activates immediately.</p>
+                    <p>The entry light brightens gradually, curtains half open, the air conditioner is set to 26°C, and the speaker broadcasts daily weather.</p>
+                    <p>Encrypted device status is uploaded to the cloud, and Mi Home APP as well as the property backend synchronously update logs.</p>
+                </div>
+            </div>
+
+            <div class="step-images centered">
+                <div class="image-card">
+                    <img src="image666/（图片6-5）.png" alt="Contactless Access Flow" class="step-image">
+                    <p class="image-caption">图片 6-5</p>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Link 2: Automatic Morning Wake-up Linkage</h3>
+                
+                <div class="process-description">
+                    <p>The gateway triggers at 7:00 and reads data from the windowsill illumination sensor. Curtains fully open under sufficient light and half-open on cloudy days.</p>
+                    <p>Bedroom lights brighten slowly, the air conditioner is adjusted to 24°C, and the speaker plays soft music.</p>
+                    <p>Real-time power consumption data of each unit is uploaded to the property backend for statistics.</p>
+                </div>
+            </div>
+
+            <div class="step-images centered">
+                <div class="image-card">
+                    <img src="image666/（图片6-6）.png" alt="Automatic Morning Wake-up" class="step-image">
+                    <p class="image-caption">图片 6-6</p>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Link 3: Security Arm Flow When Leaving Home</h3>
+                
+                <div class="process-description">
+                    <p>Lift the door handle to lock, and the gateway receives the trigger signal for leaving mode. All lights turn off, curtains close fully, power of non-essential household appliances cuts off, and the sweeping robot starts cleaning.</p>
+                    <p>Door and window sensors enter alert mode; unauthorized opening triggers sound-light alarms and mobile alerts for residents and property staff.</p>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Link 4: Closed-Loop Safety Process for Gas Leakage</h3>
+                
+                <div class="process-description">
+                    <p>The gas sensor detects excessive methane concentration and transmits data to the gateway via Zigbee. The gateway executes offline emergency operations: cut off the gas valve, turn on the exhaust fan, activate whole-house sound-light alarms, and loop voice warnings.</p>
+                    <p>Alerts are simultaneously pushed to residents' mobile phones, the property big screen and the community fire control room.</p>
+                    <p>Alarms automatically cancel when gas concentration returns to a safe range, and all logs are permanently stored on the cloud.</p>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Link 5: Voice Control for Whole House Devices</h3>
+                
+                <div class="process-description">
+                    <p>The speaker captures the voice command "Xiaoai, movie mode" and uploads it to the gateway for parsing. The gateway sends multi-protocol commands: turn off main lights, switch on ambient lights, fully close curtains, and set the air conditioner to 25°C.</p>
+                    <p>Real-time operating status of all devices is synchronized to the Mi Home APP.</p>
+                </div>
+            </div>
+
+            <div class="step-images centered">
+                <div class="image-card">
+                    <img src="image666/（图片6-7）.jpg" alt="Voice Control" class="step-image">
+                    <p class="image-caption">图片 6-7</p>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Link 6: One-Click Device Reset upon Tenant Check-out</h3>
+                
+                <div class="process-description">
+                    <p>The front-desk PMS system marks the room as vacant and sends commands to Xiaomi IoT Cloud. The cloud clears the original resident's access rights, fingerprint and NFC data on the lock, and restores factory default scene settings of all devices.</p>
+                    <p>The apartment automatically enters the vacant energy-saving mode; the property remotely monitors the online status and faults of all devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">IV</span>
+                <h2 class="step-title">Property Background IoT Operation Flow</h2>
+                <p class="step-desc">物业后台物联网运营流程</p>
+            </div>
+
+            <div class="step-content-block">
+                <ul class="operation-list">
+                    <li>Energy consumption data and sensor logs of each unit are collected every 5 minutes, while public area data is streamed to the cloud in real time.</li>
+                    <li>The cloud stores operation logs for one year with synchronous backup on the local database.</li>
+                    <li>Offline devices, gas leaks and abnormal door/window status automatically generate maintenance work orders and warning pop-ups.</li>
+                    <li>The system supports exporting energy consumption and smart facility data to connect with the government talent management platform.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">V</span>
+                <h2 class="step-title">Offline Backup Operation Mechanism</h2>
+                <p class="step-desc">离线备份运行机制</p>
+            </div>
+
+            <div class="step-content-block">
+                <ul class="offline-list">
+                    <li>All automation logic is stored locally in the gateway, so core scenes run normally without internet access.</li>
+                    <li>Building switch failures only affect public elevators and access control, while indoor smart devices operate independently.</li>
+                    <li>One single offline sensor will not block the whole linkage system, and maintenance reminders are automatically generated on the backend.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">VI</span>
+                <h2 class="step-title">Full IoT Data Flow Overview</h2>
+                <p class="step-desc">完整物联网数据流概览</p>
+            </div>
+
+            <div class="step-content-block">
+                <div class="data-flow">
+                    <p class="flow-main"><strong>Physical sensors & locks → Zigbee/BLE/WiFi → Indoor multi-mode gateway (local computing)</strong></p>
+                    
+                    <h4 class="flow-subtitle">Gateway two-way transmission:</h4>
+                    <ol>
+                        <li>Local commands → Lights, curtains, solenoid valves (automatic linkage)</li>
+                        <li>Encrypted data → Building switches → Community server → Xiaomi IoT Cloud</li>
+                    </ol>
+                    
+                    <h4 class="flow-subtitle">Cloud two-way synchronization:</h4>
+                    <ul>
+                        <li><strong>Downlink:</strong> Remote control, scene modification, access authorization</li>
+                        <li><strong>Uplink:</strong> Equipment status, access records, alarms, energy consumption data</li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -94,11 +94,27 @@
                 <h3 class="content-subtitle">2 - Application Code</h3>
                 
                 <h4 class="code-subtitle">2.1 Final Flowing Light Code</h4>
-                <div class="step-images centered">
-                    <div class="image-card">
-                        <img src="image222/2-1.png" alt="流水灯代码" class="step-image">
-                        <p class="image-caption">图片 2-1</p>
-                    </div>
+                
+                <div class="code-block">
+                    <pre><code class="language-cpp">// Flowing LED experiment, using Arduino UNO R4 WIFI, pins 1~5 connected to LEDs
+
+const int ledPins[] = {1, 2, 3, 4, 5};
+const int numLeds = 5;
+
+void setup() {
+  for (int i = 0; i &lt; numLeds; i++) {
+    pinMode(ledPins[i], OUTPUT);
+    digitalWrite(ledPins[i], LOW); // Initially turn off all LEDs
+  }
+}
+
+void loop() {
+  for (int i = 0; i &lt; numLeds; i++) {
+    digitalWrite(ledPins[i], HIGH); // Turn on current LED
+    delay(200);                     // Keep lit for 200ms
+    digitalWrite(ledPins[i], LOW);  // Turn off current LED
+  }
+}</code></pre>
                 </div>
 
                 <h4 class="code-subtitle">2.2 Code Logic Explanation</h4>
@@ -128,7 +144,7 @@
                 
                 <div class="step-images centered">
                     <div class="image-card">
-                        <img src="image222/2-2.png" alt="电路图" class="step-image">
+                        <img src="image222/2-2.jpg" alt="Circuit Diagram" class="step-image">
                         <p class="image-caption">图片 2-2</p>
                     </div>
                 </div>
@@ -170,7 +186,7 @@
                 <h3 class="content-subtitle">5 - Flowing Light Effect Demonstration</h3>
                 
                 <div class="video-container">
-                    <video controls class="demo-video" poster="image222/2-1.png">
+                    <video controls class="demo-video">
                         <source src="image222/view1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -211,6 +227,102 @@
                     </div>
                 </div>
             </div>
+
+            <section class="pm-section">
+                <div class="pm-step">
+                    <div class="step-header">
+                        <span class="step-number">CODE</span>
+                        <h2 class="step-title">Input Code</h2>
+                        <p class="step-desc">输入代码 - HC-SR04 + WS2812 LED Ring</p>
+                    </div>
+
+                    <div class="code-block">
+                        <pre><code class="language-cpp">#include &lt;Adafruit_NeoPixel.h&gt;
+
+// Ultrasonic sensor pin definition
+const int trigPin = 9;
+const int echoPin = 10;
+long echoTime;
+int distance;
+const int dangerDistance = 30; // Danger distance threshold (unit: cm)
+
+// WS2812 LED ring configuration
+#define LED_PIN 6
+#define LED_NUM 12  // Modify according to the actual number of LEDs on your ring
+Adafruit_NeoPixel ring(LED_NUM, LED_PIN, NEO_GRB + NEO_KHZ800);
+
+void setup() {
+  // Initialize ultrasonic sensor
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  Serial.begin(9600);
+
+  // Initialize LED ring
+  ring.begin();
+  ring.clear();
+  ring.show();
+}
+
+void loop() {
+  // Ultrasonic ranging
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  echoTime = pulseIn(echoPin, HIGH);
+  distance = echoTime * 0.034 / 2;
+
+  Serial.print("Current Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  // Judge whether entering the dangerous area
+  if (distance &lt; dangerDistance) {
+    colorRotate(); // Activate colorful rotating warning effect
+  } else {
+    ring.clear();  // Turn off the light ring in safe status
+    ring.show();
+  }
+
+  delay(80);
+}
+
+// Color rotating effect function
+void colorRotate() {
+  uint32_t color;
+  // Traverse each LED to realize rotating effect by color offset
+  for (int i = 0; i &lt; LED_NUM; i++) {
+    ring.clear();
+    // Cycle rainbow colors
+    color = ring.ColorHSV((i * 65536L / LED_NUM), 255, 255);
+    ring.setPixelColor(i, color);
+    ring.setPixelColor((i + 1) % LED_NUM, ring.ColorHSV(((i + 1) * 65536L / LED_NUM), 255, 180));
+    ring.show();
+    delay(30); // Smaller value means faster rotation
+  }
+}</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="pm-section">
+                <div class="pm-step">
+                    <div class="step-header">
+                        <span class="step-number">DIAGRAM</span>
+                        <h2 class="step-title">Circuit Simulation Diagram</h2>
+                        <p class="step-desc">电路仿真图</p>
+                    </div>
+
+                    <div class="step-images centered">
+                        <div class="image-card">
+                            <img src="image222/2-11.png" alt="Circuit Simulation Diagram" class="step-image">
+                            <p class="image-caption">图片 2-11</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <div class="step-content-block">
                 <h3 class="content-subtitle">Introduction to Arduino UNO R4 Wifi</h3>
@@ -301,102 +413,6 @@
     <section class="pm-section">
         <div class="pm-step">
             <div class="step-header">
-                <span class="step-number">CODE</span>
-                <h2 class="step-title">Input Code</h2>
-                <p class="step-desc">输入代码 - HC-SR04 + WS2812 LED Ring</p>
-            </div>
-
-            <div class="code-block">
-                <pre><code class="language-cpp">#include &lt;Adafruit_NeoPixel.h&gt;
-
-// Ultrasonic sensor pin definition
-const int trigPin = 9;
-const int echoPin = 10;
-long echoTime;
-int distance;
-const int dangerDistance = 30; // Danger distance threshold (unit: cm)
-
-// WS2812 LED ring configuration
-#define LED_PIN 6
-#define LED_NUM 12  // Modify according to the actual number of LEDs on your ring
-Adafruit_NeoPixel ring(LED_NUM, LED_PIN, NEO_GRB + NEO_KHZ800);
-
-void setup() {
-  // Initialize ultrasonic sensor
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  Serial.begin(9600);
-
-  // Initialize LED ring
-  ring.begin();
-  ring.clear();
-  ring.show();
-}
-
-void loop() {
-  // Ultrasonic ranging
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-
-  echoTime = pulseIn(echoPin, HIGH);
-  distance = echoTime * 0.034 / 2;
-
-  Serial.print("Current Distance: ");
-  Serial.print(distance);
-  Serial.println(" cm");
-
-  // Judge whether entering the dangerous area
-  if (distance &lt; dangerDistance) {
-    colorRotate(); // Activate colorful rotating warning effect
-  } else {
-    ring.clear();  // Turn off the light ring in safe status
-    ring.show();
-  }
-
-  delay(80);
-}
-
-// Color rotating effect function
-void colorRotate() {
-  uint32_t color;
-  // Traverse each LED to realize rotating effect by color offset
-  for (int i = 0; i &lt; LED_NUM; i++) {
-    ring.clear();
-    // Cycle rainbow colors
-    color = ring.ColorHSV((i * 65536L / LED_NUM), 255, 255);
-    ring.setPixelColor(i, color);
-    ring.setPixelColor((i + 1) % LED_NUM, ring.ColorHSV(((i + 1) * 65536L / LED_NUM), 255, 180));
-    ring.show();
-    delay(30); // Smaller value means faster rotation
-  }
-}</code></pre>
-            </div>
-        </div>
-    </section>
-
-    <section class="pm-section">
-        <div class="pm-step">
-            <div class="step-header">
-                <span class="step-number">DIAGRAM</span>
-                <h2 class="step-title">Circuit Simulation Diagram</h2>
-                <p class="step-desc">电路仿真图</p>
-            </div>
-
-            <div class="step-images centered">
-                <div class="image-card">
-                    <img src="image222/2-11.jpg" alt="Circuit Simulation Diagram" class="step-image">
-                    <p class="image-caption">电路仿真示意图</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="pm-section">
-        <div class="pm-step">
-            <div class="step-header">
                 <span class="step-number">DEMO</span>
                 <h2 class="step-title">Physical Device Demonstration Diagram</h2>
                 <p class="step-desc">实物设备演示图</p>
@@ -405,7 +421,7 @@ void colorRotate() {
             <div class="step-images centered">
                 <div class="image-card">
                     <img src="image222/2-12.png" alt="Physical Device Demonstration" class="step-image">
-                    <p class="image-caption">实物设备演示图</p>
+                    <p class="image-caption">图片 2-12</p>
                 </div>
             </div>
         </div>
