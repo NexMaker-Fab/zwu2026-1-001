@@ -159,9 +159,9 @@
             <div class="step-content-block">
                 <h3 class="content-subtitle">Core Technologies</h3>
                 <ol class="summary-list">
-                    <li><strong>Ultrasonic Ranging (HC‑SR04)</strong> – Measures distance by sound wave reflection time, with centimetre‑level accuracy. The code uses a fixed sound speed (0.034 cm/μs) suitable for indoor environments.</li>
+                    <li><strong>Ultrasonic Ranging (HC‑SR04)</strong> – Measures distance by sound wave reflection time, with centimetre‑level accuracy. The code uses a fixed sound speed suitable for indoor environments.</li>
                     <li><strong>LED Ring (WS2812B)</strong> – Single‑wire communication (DIN) controls each pixel's RGB colour and brightness, enabling smooth gradients and rotating effects via the FastLED library.</li>
-                    <li><strong>Dwell‑Time Algorithm</strong> – Continuously reads distance; if the value stays below the threshold (e.g., 80 cm) for a set time (e.g., 3 seconds), the alert state is triggered; otherwise, it returns to safe mode.</li>
+                    <li><strong>Dwell‑Time Algorithm</strong> – Continuously reads distance; if the value stays below the threshold for a set time, the alert state is triggered; otherwise, it returns to safe mode.</li>
                     <li><strong>Low Power & Stability</strong> – Powered by Arduino UNO (5V), total consumption ~5W, suitable for long‑term plug‑in use.</li>
                 </ol>
             </div>
@@ -176,7 +176,7 @@
                     </div>
                     <div class="hardware-item">
                         <span class="hardware-label">LED brightness may irritate eyes:</span>
-                        <span class="hardware-value">Reduce HSV brightness (e.g., set to 180) and use warm colours (amber, pale yellow)</span>
+                        <span class="hardware-value">Reduce HSV brightness and use warm colours (amber, pale yellow)</span>
                     </div>
                     <div class="hardware-item">
                         <span class="hardware-label">System freeze after prolonged operation:</span>
@@ -466,6 +466,36 @@ void colorRotate() {
                     <li><strong>SDG 11 – Sustainable Cities and Communities</strong> – Provides practical smart assistance for community‑based and home‑based elderly care, enhancing age‑friendly and safe neighbourhoods.</li>
                     <li><strong>SDG 12 – Responsible Consumption and Production</strong> – Uses modular, replaceable electronic components to reduce e‑waste; the 3D‑printed shell uses biodegradable PLA filament, reflecting environmentally conscious design.</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">VII</span>
+                <h2 class="step-title">Video</h2>
+                <p class="step-desc">项目演示视频</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Project Demonstration Video</h3>
+                
+                <div class="video-container">
+                    <video controls class="demo-video">
+                        <source src="image999/view999.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <div class="video-container">
+                    <video controls class="demo-video">
+                        <source src="image999/view888.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
     </section>
