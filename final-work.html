@@ -551,6 +551,63 @@ void colorRotate() {
                 navbar.classList.remove('scrolled');
             }
         });
+
+        // 鼠标点击互动效果 - Ripple & Glow Effect
+        document.addEventListener('click', function(e) {
+            // 创建涟漪效果
+            const ripple = document.createElement('div');
+            ripple.className = 'click-ripple';
+            const size = Math.max(window.innerWidth, window.innerHeight) * 0.1;
+            ripple.style.width = size + 'px';
+            ripple.style.height = size + 'px';
+            ripple.style.left = (e.clientX - size / 2) + 'px';
+            ripple.style.top = (e.clientY - size / 2) + 'px';
+            document.body.appendChild(ripple);
+
+            // 创建光晕效果
+            const glow = document.createElement('div');
+            glow.className = 'click-glow';
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+            document.body.appendChild(glow);
+
+            // 动画结束后移除元素
+            setTimeout(() => {
+                ripple.remove();
+                glow.remove();
+            }, 800);
+        });
+
+        // 为可交互元素添加互动类
+        document.querySelectorAll('.image-card, button, a, .final-link').forEach(el => {
+            el.classList.add('interactive');
+        });
+
+        // 鼠标移动拖尾效果
+        let lastTrailTime = 0;
+        const trailInterval = 30; // 每30ms创建一个拖尾点，控制密度
+
+        document.addEventListener('mousemove', function(e) {
+            const currentTime = Date.now();
+            
+            // 控制拖尾生成频率
+            if (currentTime - lastTrailTime < trailInterval) {
+                return;
+            }
+            lastTrailTime = currentTime;
+
+            // 创建拖尾粒子
+            const trail = document.createElement('div');
+            trail.className = 'mouse-trail';
+            trail.style.left = e.clientX + 'px';
+            trail.style.top = e.clientY + 'px';
+            document.body.appendChild(trail);
+
+            // 动画结束后移除元素
+            setTimeout(() => {
+                trail.remove();
+            }, 400);
+        });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
