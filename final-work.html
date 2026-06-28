@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Work - Cognitive Guardian - 这是啥组</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">这是啥组</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#members">成员</a></li>
+                <li><a href="index.html#works">作业</a></li>
+                <li><a href="index.html#final">期末作品</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="pm-hero">
+        <div class="pm-content">
+            <h1 class="pm-title">Cognitive Guardian</h1>
+            <p class="pm-subtitle">Mild Cognitive Impairment (MCI) Home Safety Assistance Device</p>
+            <div class="pm-line"></div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">I</span>
+                <h2 class="step-title">Product Positioning & Problem Solved</h2>
+                <p class="step-desc">产品定位与解决的问题</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Product Name</h3>
+                <p class="detailed-intro">Mild Cognitive Impairment (MCI) Home Safety Assistance Device (Cognitive Guardian)</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Target Users</h3>
+                <p class="detailed-intro">Elderly people with mild cognitive impairment or early-stage Alzheimer's disease living at home, as well as their caregivers (family members or professional carers).</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Core Pain Points</h3>
+                <ul class="operation-list">
+                    <li>Due to declining cognitive function, seniors often unconsciously approach dangerous areas such as windows, stoves, or balconies, or linger there for extended periods, increasing the risk of falls, burns, or wandering.</li>
+                    <li>Traditional security devices (e.g., buzzer alarms) produce harsh sounds that can trigger anxiety, panic, and even worsen the patient's condition.</li>
+                    <li>Caregivers cannot provide 24/7 supervision and lack a gentle, timely reminder mechanism.</li>
+                </ul>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Our Solution</h3>
+                <ul class="operation-list">
+                    <li>Use an ultrasonic sensor to continuously monitor the distance between the senior and hazardous zones.</li>
+                    <li>When the person enters a dangerous distance (e.g., &lt;80 cm) and stays there for over 3 seconds, the device automatically triggers <strong>soft gradient lighting + gentle text prompts</strong> – a low‑stimulus way to remind the user to move away, while also alerting nearby caregivers.</li>
+                    <li>No harsh alarms; the interaction is tailored to the sensory needs of people with cognitive impairment, ensuring both safety and human care.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">II</span>
+                <h2 class="step-title">Innovation Highlights</h2>
+                <p class="step-desc">创新亮点</p>
+            </div>
+
+            <div class="step-content-block">
+                <ol class="summary-list">
+                    <li><strong>Human‑Centred Sensory Design</strong> – Replaces traditional loud buzzers with gentle light + text feedback, avoiding anxiety and fear, and truly matching the psychological and sensory profile of MCI patients.</li>
+                    <li><strong>Zero‑Threshold Deployment</strong> – Fixed pin assignments for all connections; no complex debugging; code is ready to upload with only one library (FastLED) required – ideal for student innovation projects.</li>
+                    <li><strong>Compact Integrated Structure</strong> – 3D‑printed fully rounded shell (no sharp edges), matte finish to reduce visual distraction; dedicated slots for sensor, LED ring, and display make assembly straightforward.</li>
+                    <li><strong>Smart Dwell‑Time Detection</strong> – Not just instantaneous proximity, but a customizable delay (e.g., 3 seconds) to identify actual "lingering" behaviour, minimising false alarms.</li>
+                    <li><strong>Low Cost, High Practicality</strong> – Total hardware cost under 100 CNY (approx. 15 USD), yet effectively fills a critical gap in home‑based cognitive care – outstanding cost‑performance and scalability.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">III</span>
+                <h2 class="step-title">Market Analysis</h2>
+                <p class="step-desc">市场分析（同类产品、价格、渠道）</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Comparison with Existing Products</h3>
+                
+                <div class="hardware-list">
+                    <div class="hardware-item">
+                        <span class="hardware-label">Smart door/window sensor (Xiaomi, Aqara):</span>
+                        <span class="hardware-value">50–200 CNY - Only detects open/close, not presence or distance</span>
+                    </div>
+                    <div class="hardware-item">
+                        <span class="hardware-label">PIR motion sensor (Hikvision, Ezviz):</span>
+                        <span class="hardware-value">80–300 CNY - Detects movement only; insensitive to stationary or slow movement</span>
+                    </div>
+                    <div class="hardware-item">
+                        <span class="hardware-label">Smart camera with alarm (360, TP‑Link):</span>
+                        <span class="hardware-value">200–600 CNY - Privacy concerns, cloud fees, harsh alarm sounds</span>
+                    </div>
+                    <div class="hardware-item">
+                        <span class="hardware-label">Professional dementia care devices (Imported brands):</span>
+                        <span class="hardware-value">Thousands to &gt;10,000 CNY - Expensive, complex operation, not suitable for average households</span>
+                    </div>
+                    <div class="hardware-item" style="background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 8px;">
+                        <span class="hardware-label"><strong>Our Product (Self‑developed DIY solution):</strong></span>
+                        <span class="hardware-value"><strong>~150–300 CNY (including shell) - Dedicated function, gentle interaction, open‑source, suitable for home trials</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Target Pricing</h3>
+                <div class="detailed-intro">
+                    <p>Recommended retail price: <strong>300–500 CNY</strong> (~40–70 USD) as a lightweight assistive device, far below medical‑grade alternatives.</p>
+                    <p>With mass production, BOM cost can be reduced to under 80 CNY, leaving healthy margins.</p>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Market Channels</h3>
+                <ul class="operation-list">
+                    <li><strong>Online:</strong> E‑commerce platforms (Taobao, JD.com, Pinduoduo) for direct‑to‑consumer sales; or crowdfunding (Xiaomi Youpin, Kickstarter) for initial launch.</li>
+                    <li><strong>Offline:</strong> Partner with community elderly care centres, rehabilitation institutions, and dementia care associations for experiential promotion.</li>
+                    <li><strong>B2B:</strong> Bulk customised procurement for nursing homes and day‑care centres.</li>
+                </ul>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Market Potential</h3>
+                <p class="detailed-intro">China has approximately 38 million elderly with MCI, and the ageing population continues to grow. Home safety needs are surging, and this product addresses a clear demand with strong differentiation – good market prospects.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">IV</span>
+                <h2 class="step-title">Key Technology Analysis & Potential Technical Issues</h2>
+                <p class="step-desc">关键技术分析与潜在技术问题</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Core Technologies</h3>
+                <ol class="summary-list">
+                    <li><strong>Ultrasonic Ranging (HC‑SR04)</strong> – Measures distance by sound wave reflection time, with centimetre‑level accuracy. The code uses a fixed sound speed (0.034 cm/μs) suitable for indoor environments.</li>
+                    <li><strong>LED Ring (WS2812B)</strong> – Single‑wire communication (DIN) controls each pixel's RGB colour and brightness, enabling smooth gradients and rotating effects via the FastLED library.</li>
+                    <li><strong>Dwell‑Time Algorithm</strong> – Continuously reads distance; if the value stays below the threshold (e.g., 80 cm) for a set time (e.g., 3 seconds), the alert state is triggered; otherwise, it returns to safe mode.</li>
+                    <li><strong>Low Power & Stability</strong> – Powered by Arduino UNO (5V), total consumption ~5W, suitable for long‑term plug‑in use.</li>
+                </ol>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Potential Technical Problems & Solutions</h3>
+                
+                <div class="hardware-list">
+                    <div class="hardware-item">
+                        <span class="hardware-label">Ultrasonic interference from curtains or reflective surfaces:</span>
+                        <span class="hardware-value">Adjust mounting angle; avoid facing smooth reflectors; add median filtering or multi‑sample averaging in software</span>
+                    </div>
+                    <div class="hardware-item">
+                        <span class="hardware-label">LED brightness may irritate eyes:</span>
+                        <span class="hardware-value">Reduce HSV brightness (e.g., set to 180) and use warm colours (amber, pale yellow)</span>
+                    </div>
+                    <div class="hardware-item">
+                        <span class="hardware-label">System freeze after prolonged operation:</span>
+                        <span class="hardware-value">Add a watchdog timer (built into Arduino) or periodic sensor resets; include error handling in code</span>
+                    </div>
+                    <div class="hardware-item">
+                        <span class="hardware-label">Wiring errors causing module damage:</span>
+                        <span class="hardware-value">Strictly follow "GND first, then VCC, then signal" sequence; use breadboard power rails to avoid reverse connection</span>
+                    </div>
+                    <div class="hardware-item">
+                        <span class="hardware-label">OLED I2C address mismatch:</span>
+                        <span class="hardware-value">Code pre‑sets both 0x3C and 0x3D; serial output will indicate failure for easy troubleshooting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">V</span>
+                <h2 class="step-title">Materials & Manufacturing Method</h2>
+                <p class="step-desc">材料与制造方法</p>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Component List</h3>
+                
+                <div class="hardware-list">
+                    <div class="hardware-item">
+                        <span class="hardware-label">Main board:</span>
+                        <span class="hardware-value">Arduino UNO R4 - Qty: 1</span>
+                    </div>
+                </div>
+
+                <div class="step-images grid-2">
+                    <div class="image-card">
+                        <img src="image999/11-1.jpg" alt="Arduino UNO R4" class="step-image">
+                        <p class="image-caption">图片 11-1</p>
+                    </div>
+                    
+                    <div class="image-card">
+                        <img src="image999/11-2.jpg" alt="Arduino UNO R4" class="step-image">
+                        <p class="image-caption">图片 11-2</p>
+                    </div>
+                </div>
+
+                <div class="hardware-list">
+                    <div class="hardware-item">
+                        <span class="hardware-label">Ultrasonic sensor:</span>
+                        <span class="hardware-value">HC‑SR04 - Qty: 1</span>
+                    </div>
+                </div>
+
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image999/11-3.jpg" alt="HC-SR04 Ultrasonic Sensor" class="step-image">
+                        <p class="image-caption">图片 11-3</p>
+                    </div>
+                </div>
+
+                <div class="hardware-list">
+                    <div class="hardware-item">
+                        <span class="hardware-label">LED ring:</span>
+                        <span class="hardware-value">WS2812B (12 or 16 LEDs) - Qty: 1</span>
+                    </div>
+                </div>
+
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image999/11-4.jpg" alt="WS2812B LED Ring" class="step-image">
+                        <p class="image-caption">图片 11-4</p>
+                    </div>
+                </div>
+
+                <div class="hardware-list">
+                    <div class="hardware-item">
+                        <span class="hardware-label">OLED display:</span>
+                        <span class="hardware-value">0.91" or 0.96", I2C, 128×32 - Qty: 1</span>
+                    </div>
+                </div>
+
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image999/11-5.jpg" alt="OLED Display" class="step-image">
+                        <p class="image-caption">图片 11-5</p>
+                    </div>
+                </div>
+
+                <div class="hardware-list">
+                    <div class="hardware-item">
+                        <span class="hardware-label">Breadboard:</span>
+                        <span class="hardware-value">400 or 800 holes - Qty: 1</span>
+                    </div>
+                    <div class="hardware-item">
+                        <span class="hardware-label">Jumper wires:</span>
+                        <span class="hardware-value">Male‑to‑male, male‑to‑female - several</span>
+                    </div>
+                    <div class="hardware-item">
+                        <span class="hardware-label">Power supply:</span>
+                        <span class="hardware-value">5V USB adapter (phone charger) - Qty: 1</span>
+                    </div>
+                    <div class="hardware-item">
+                        <span class="hardware-label">Enclosure:</span>
+                        <span class="hardware-value">3D‑printed (PLA filament) - Qty: 1 set</span>
+                    </div>
+                </div>
+
+                <div class="step-images grid-2">
+                    <div class="image-card">
+                        <img src="image999/11-6.jpg" alt="3D Printed Enclosure" class="step-image">
+                        <p class="image-caption">图片 11-6</p>
+                    </div>
+                    
+                    <div class="image-card">
+                        <img src="image999/11-7.jpg" alt="3D Printed Enclosure" class="step-image">
+                        <p class="image-caption">图片 11-7</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-content-block">
+                <h3 class="content-subtitle">Manufacturing Steps</h3>
+                
+                <ol class="connection-steps">
+                    <li><strong>3D Print the Enclosure:</strong> Print the fully rounded shell (80×60×40 mm) with pre‑cut openings for the sensor, LED ring slot, and display recess.</li>
+                    
+                    <li><strong>Hardware Wiring:</strong> Following the detailed connection guide.</li>
+                </ol>
+
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image999/11-8.png" alt="Hardware Wiring Diagram" class="step-image">
+                        <p class="image-caption">图片 11-8</p>
+                    </div>
+                </div>
+
+                <ol class="connection-steps" style="list-style: none; counter-reset: step-counter;">
+                    <li style="counter-increment: step-counter;"><strong>Upload the Code:</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li>Install Arduino IDE; use the Library Manager to install "FastLED" and "Adafruit SSD1306" etc.</li>
+                            <li>Copy the provided code; adjust danger distance (default 80 cm) and dwell time if needed (add a timer variable).</li>
+                            <li>Upload to Arduino UNO.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="code-block">
+                    <pre><code class="language-cpp">#include &lt;Adafruit_NeoPixel.h&gt;
+// OLED屏幕库
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_SSD1306.h&gt;
+
+// 超声波引脚定义
+const int trigPin = 9;
+const int echoPin = 10;
+long echoTime;
+int distance;
+const int dangerDistance = 80; // 危险距离阈值(cm)
+
+// WS2812灯环配置
+#define LED_PIN 6
+#define LED_NUM 12  // 根据你灯环实际灯珠数量修改
+Adafruit_NeoPixel ring(LED_NUM, LED_PIN, NEO_GRB + NEO_KHZ800);
+
+// -------------------------- OLED新增配置 --------------------------
+#define SCREEN_W 128
+#define SCREEN_H 32
+Adafruit_SSD1306 display(SCREEN_W, SCREEN_H, &Wire, -1);
+// OLED屏幕I2C地址，绝大多数模块是0x3C，少数0x3D
+#define OLED_ADDR 0x3C
+// -----------------------------------------------------------------
+
+void setup() {
+  // 超声波初始化
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  Serial.begin(9600);
+
+  // 灯环初始化
+  ring.begin();
+  ring.clear();
+  ring.show();
+
+  // -------------------------- OLED初始化 --------------------------
+  if (!display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR)) {
+    Serial.println(F("OLED屏幕初始化失败！检查接线或地址"));
+    for (;;); // 卡死程序，代表屏幕没连上
+  }
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(0, 0);
+  display.println("Distance Detect");
+  display.println("System Ready");
+  display.display();
+  delay(1000);
+  // ----------------------------------------------------------------
+}
+
+void loop() {
+  // 超声波测距
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  echoTime = pulseIn(echoPin, HIGH);
+  distance = echoTime * 0.034 / 2;
+
+  Serial.print("当前距离：");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  // -------------------------- OLED刷新显示 --------------------------
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setCursor(0, 0);
+  display.print(" ");
+  if (distance &lt; dangerDistance) {
+    display.println("WARNING!!");
+  } else {
+    display.println("SAFE AREA");
+  }
+  display.display();
+  // -----------------------------------------------------------------
+
+  // 判断是否进入危险区域
+  if (distance &lt; dangerDistance) {
+    colorRotate(); // 彩色快速旋转警示
+  } else {
+    ring.clear();  // 安全状态，灯环熄灭
+    ring.show();
+  }
+
+  delay(80);
+}
+
+// 彩色循环旋转效果函数
+void colorRotate() {
+  uint32_t color;
+  // 遍历每一颗灯珠，依次偏移色彩实现旋转
+  for (int i = 0; i &lt; LED_NUM; i++) {
+    ring.clear();
+    // 循环彩虹色
+    color = ring.ColorHSV((i * 65536L / LED_NUM), 255, 255);
+    ring.setPixelColor(i, color);
+    ring.setPixelColor((i + 1) % LED_NUM, ring.ColorHSV(((i + 1) * 65536L / LED_NUM), 255, 180));
+    ring.show();
+    delay(30); // 数值越小旋转越快
+  }
+}</code></pre>
+                </div>
+
+                <ol class="connection-steps" style="list-style: none; counter-reset: step-counter;" start="4">
+                    <li style="counter-increment: step-counter;"><strong>Assembly & Testing:</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li>Insert modules into their respective slots; ensure the sensor probe faces outward.</li>
+                            <li>Power on; move your hand near the sensor – the LED ring should show a rotating colour effect, and the OLED should display "WARNING!!".</li>
+                            <li>Adjust the distance threshold until it meets your demonstration requirements.</li>
+                        </ul>
+                    </li>
+                    <li style="counter-increment: step-counter;"><strong>Final Fixing:</strong> Use hot glue or double‑sided tape to secure modules inside the shell; close the cover (or use a snap‑fit design).</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section class="pm-section">
+        <div class="pm-step">
+            <div class="step-header">
+                <span class="step-number">VI</span>
+                <h2 class="step-title">Alignment with Sustainable Development Goals (SDGs)</h2>
+                <p class="step-desc">与联合国可持续发展目标的契合</p>
+            </div>
+
+            <div class="step-content-block">
+                <p class="detailed-intro">This project directly and indirectly contributes to the following United Nations SDGs:</p>
+                
+                <ul class="operation-list">
+                    <li><strong>SDG 3 – Good Health and Well‑being</strong> – Prevents accidental injuries (falls, burns, falls from height) among the elderly, reducing health burdens and healthcare costs, and improving quality of life for older adults.</li>
+                    <li><strong>SDG 9 – Industry, Innovation and Infrastructure</strong> – Promotes inclusive, affordable assistive technology through open‑source hardware and low‑cost innovation, fostering inclusive technological development.</li>
+                    <li><strong>SDG 10 – Reduced Inequalities</strong> – The low‑cost model makes basic home safety monitoring accessible to low‑ and middle‑income families, narrowing the digital and care‑resource gap.</li>
+                    <li><strong>SDG 11 – Sustainable Cities and Communities</strong> – Provides practical smart assistance for community‑based and home‑based elderly care, enhancing age‑friendly and safe neighbourhoods.</li>
+                    <li><strong>SDG 12 – Responsible Consumption and Production</strong> – Uses modular, replaceable electronic components to reduce e‑waste; the 3D‑printed shell uses biodegradable PLA filament, reflecting environmentally conscious design.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2026 这是啥组</p>
+            <p class="footer-subtext">艺术与科技专业</p>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.image-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+</body>
+</html>
