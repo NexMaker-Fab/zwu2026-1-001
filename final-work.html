@@ -160,14 +160,76 @@
                         <span class="hardware-label">Smart door/window sensor (Xiaomi, Aqara):</span>
                         <span class="hardware-value">50–200 CNY - Only detects open/close, not presence or distance</span>
                     </div>
+                </div>
+
+                <div class="step-images grid-2">
+                    <div class="image-card">
+                        <img src="image999/40-1.jpg" alt="Smart Door Sensor" class="step-image">
+                        <p class="image-caption">图片 40-1</p>
+                    </div>
+                    
+                    <div class="image-card">
+                        <img src="image999/40-2.PNG" alt="Smart Door Sensor" class="step-image" style="transform: scale(0.7); transform-origin: center;">
+                        <p class="image-caption">图片 40-2</p>
+                    </div>
+                </div>
+
+                <div class="hardware-list">
                     <div class="hardware-item">
                         <span class="hardware-label">PIR motion sensor (Hikvision, Ezviz):</span>
                         <span class="hardware-value">80–300 CNY - Detects movement only; insensitive to stationary or slow movement</span>
                     </div>
+                </div>
+
+                <div class="step-images grid-2">
+                    <div class="image-card">
+                        <img src="image999/40-3.JPG" alt="PIR Motion Sensor" class="step-image" style="transform: scale(0.7); transform-origin: center;">
+                        <p class="image-caption">图片 40-3</p>
+                    </div>
+                    
+                    <div class="image-card">
+                        <img src="image999/40-4.jpg" alt="PIR Motion Sensor" class="step-image" style="transform: scale(0.7); transform-origin: center;">
+                        <p class="image-caption">图片 40-4</p>
+                    </div>
+                </div>
+
+                <div class="hardware-list">
                     <div class="hardware-item">
                         <span class="hardware-label">Smart camera with alarm (360, TP‑Link):</span>
                         <span class="hardware-value">200–600 CNY - Privacy concerns, cloud fees, harsh alarm sounds</span>
                     </div>
+                </div>
+
+                <div class="step-images grid-2">
+                    <div class="image-card">
+                        <img src="image999/40-5.JPG" alt="Smart Camera" class="step-image" style="transform: scale(0.7); transform-origin: center;">
+                        <p class="image-caption">图片 40-5</p>
+                    </div>
+                    
+                    <div class="image-card">
+                        <img src="image999/40-6.jpg" alt="Smart Camera" class="step-image" style="transform: scale(0.7); transform-origin: center;">
+                        <p class="image-caption">图片 40-6</p>
+                    </div>
+                </div>
+
+                <div class="hardware-list">
+                    <div class="hardware-item">
+                        <span class="hardware-label">Wearable elderly anti-lost watch (Aikaian, Suoqi):</span>
+                        <span class="hardware-value">200–600 CNY - Poor wearing compliance for MCI elderly; easy loss and damage; unable to solve home corner collision and night walking safety risks</span>
+                    </div>
+                </div>
+
+                <div class="step-images grid-2">
+                    <div class="image-card">
+                        <img src="image999/40-7.jpg" alt="Anti-lost Watch" class="step-image" style="transform: scale(0.7); transform-origin: center;">
+                        <p class="image-caption">图片 40-7</p>
+                    </div>
+                    
+                    <div class="image-card">
+                        <img src="image999/40-8.jpg" alt="Anti-lost Watch" class="step-image" style="transform: scale(0.7); transform-origin: center;">
+                        <p class="image-caption">图片 40-8</p>
+                    </div>
+                </div>
                     <div class="hardware-item">
                         <span class="hardware-label">Professional dementia care devices (Imported brands):</span>
                         <span class="hardware-value">Thousands to &gt;10,000 CNY - Expensive, complex operation, not suitable for average households</span>
@@ -358,70 +420,91 @@
                 <h3 class="content-subtitle">Manufacturing Steps</h3>
                 
                 <ol class="connection-steps">
-                    <li><strong>3D Print the Enclosure:</strong> Print the fully rounded shell (80×60×40 mm) with pre‑cut openings for the sensor, LED ring slot, and display recess.</li>
-                    
-                    <li><strong>Hardware Wiring:</strong> Following the detailed connection guide.</li>
+                    <li><strong>3D Print the Enclosure:</strong> （图片11-13）Print an integrated rounded-corner base shell according to the drawing with overall dimensions (L 80mm × W 60mm × H 40mm). Multiple independent openings are pre-reserved on the shell: exposed probe hole for ultrasonic sensor, mounting slot for ring light strip, external embedding slot for OLED screen, and wiring channels for cables.
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li>After printing, polish burrs on shell openings and edges with sandpaper to prevent cable scratches and blockage of sensors & light sources;</li>
+                            <li>Check the matching degree of shell snap cover, and reserve sufficient internal space for separate components, breadboard and wiring;</li>
+                            <li>Clean dust inside the shell to guarantee enough space for component placement and wiring in later assembly.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image999/11-13.png" alt="3D Printed Enclosure" class="step-image">
+                        <p class="image-caption">图片 11-13</p>
+                    </div>
+                </div>
+
+                <ol class="connection-steps" style="list-style: none; counter-reset: step-counter;" start="2">
+                    <li style="counter-increment: step-counter;"><strong>Hardware Wiring:</strong> Following the detailed connection guide.
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li><strong>Main control power extension:</strong> Run wires from 5V and GND pins of Arduino UNO to positive and negative power rails on the breadboard, supplying power to all peripheral modules uniformly;</li>
+                            <li><strong>Discrete HC-SR04 ultrasonic ranging module:</strong> VCC connects to 5V rail, GND connects to ground rail, Trig signal wire separately links to D9, Echo signal wire separately links to D10;</li>
+                            <li><strong>Discrete RGB ring light strip (non-integrated module):</strong> VCC connects to 5V rail, GND connects to ground rail, DIN data signal wire separately links to digital pin D6;</li>
+                            <li><strong>Discrete I2C OLED display screen:</strong> VCC connects to 5V rail, GND connects to ground rail, SCL clock wire separately links to A5, SDA data wire separately links to A4;</li>
+                        </ul>
+                    </li>
                 </ol>
 
                 <div class="step-images centered">
                     <div class="image-card">
                         <img src="image999/11-8.png" alt="Hardware Wiring Diagram" class="step-image">
-                        <p class="image-caption">图片 11-8</p>
+                        <p class="image-caption">图片 11-8 - Standard Wiring Rules</p>
                     </div>
                 </div>
 
-                <ol class="connection-steps" style="list-style: none; counter-reset: step-counter;">
-                    <li style="counter-increment: step-counter;"><strong>Upload the Code:</strong>
+                <ol class="connection-steps" style="list-style: none; counter-reset: step-counter;" start="3">
+                    <li style="counter-increment: step-counter;"><strong>Upload the Code:</strong> （图片11-14）
                         <ul style="margin-top: 10px; margin-left: 20px;">
                             <li>Install Arduino IDE; use the Library Manager to install "FastLED" and "Adafruit SSD1306" etc.</li>
-                            <li>Copy the provided code; adjust danger distance (default 80 cm) and dwell time if needed (add a timer variable).</li>
+                            <li>Copy the provided code; adjust danger distance (default 60 cm) and alarm distance (20 cm) if needed.</li>
                             <li>Upload to Arduino UNO.</li>
                         </ul>
                     </li>
                 </ol>
 
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image999/11-14.jpg" alt="Upload Code" class="step-image">
+                        <p class="image-caption">图片 11-14</p>
+                    </div>
+                </div>
+
                 <div class="code-block">
                     <pre><code class="language-cpp">#include &lt;Adafruit_NeoPixel.h&gt;
-// OLED屏幕库
 #include &lt;Wire.h&gt;
 #include &lt;Adafruit_GFX.h&gt;
 #include &lt;Adafruit_SSD1306.h&gt;
 
-// 超声波引脚定义
 const int trigPin = 9;
 const int echoPin = 10;
 long echoTime;
 int distance;
-const int dangerDistance = 80; // 危险距离阈值(cm)
+const int dangerDistance = 60;
+const int alarmDistance = 20;
 
-// WS2812灯环配置
 #define LED_PIN 6
-#define LED_NUM 12  // 根据你灯环实际灯珠数量修改
+#define LED_NUM 12
 Adafruit_NeoPixel ring(LED_NUM, LED_PIN, NEO_GRB + NEO_KHZ800);
 
-// -------------------------- OLED新增配置 --------------------------
 #define SCREEN_W 128
 #define SCREEN_H 32
 Adafruit_SSD1306 display(SCREEN_W, SCREEN_H, &Wire, -1);
-// OLED屏幕I2C地址，绝大多数模块是0x3C，少数0x3D
 #define OLED_ADDR 0x3C
-// -----------------------------------------------------------------
 
 void setup() {
-  // 超声波初始化
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
   Serial.begin(9600);
 
-  // 灯环初始化
   ring.begin();
   ring.clear();
   ring.show();
 
-  // -------------------------- OLED初始化 --------------------------
   if (!display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR)) {
     Serial.println(F("OLED屏幕初始化失败！检查接线或地址"));
-    for (;;); // 卡死程序，代表屏幕没连上
+    for (;;);
   }
   display.clearDisplay();
   display.setTextSize(1);
@@ -431,11 +514,9 @@ void setup() {
   display.println("System Ready");
   display.display();
   delay(1000);
-  // ----------------------------------------------------------------
 }
 
 void loop() {
-  // 超声波测距
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
@@ -449,55 +530,72 @@ void loop() {
   Serial.print(distance);
   Serial.println(" cm");
 
-  // -------------------------- OLED刷新显示 --------------------------
   display.clearDisplay();
   display.setTextSize(2);
   display.setCursor(0, 0);
-  display.print(" ");
-  if (distance &lt; dangerDistance) {
-    display.println("WARNING!!");
+  if (distance >= dangerDistance) {
+    display.println("SAFE");
+  } else if (distance > alarmDistance) {
+    display.println("WARNING!");
   } else {
-    display.println("SAFE AREA");
+    display.println("DANGER!!");
   }
   display.display();
-  // -----------------------------------------------------------------
 
-  // 判断是否进入危险区域
-  if (distance &lt; dangerDistance) {
-    colorRotate(); // 彩色快速旋转警示
-  } else {
-    ring.clear();  // 安全状态，灯环熄灭
+  if (distance >= dangerDistance) {
+    ring.clear();
     ring.show();
+  } else if (distance > alarmDistance) {
+    variableSpeedRotate(distance);
+  } else {
+    policeRedFlash();
   }
 
-  delay(80);
+  delay(50);
 }
 
-// 彩色循环旋转效果函数
-void colorRotate() {
+void variableSpeedRotate(int dist) {
+  int rotateDelay = map(dist, alarmDistance + 1, dangerDistance, 5, 35);
   uint32_t color;
-  // 遍历每一颗灯珠，依次偏移色彩实现旋转
   for (int i = 0; i &lt; LED_NUM; i++) {
     ring.clear();
-    // 循环彩虹色
     color = ring.ColorHSV((i * 65536L / LED_NUM), 255, 255);
     ring.setPixelColor(i, color);
     ring.setPixelColor((i + 1) % LED_NUM, ring.ColorHSV(((i + 1) * 65536L / LED_NUM), 255, 180));
     ring.show();
-    delay(30); // 数值越小旋转越快
+    delay(rotateDelay);
   }
+}
+
+void policeRedFlash() {
+  for(int i=0; i&lt;LED_NUM; i++){
+    ring.setPixelColor(i, ring.Color(255,0,0));
+  }
+  ring.show();
+  delay(80);
+  ring.clear();
+  ring.show();
+  delay(80);
 }</code></pre>
                 </div>
 
                 <ol class="connection-steps" style="list-style: none; counter-reset: step-counter;" start="4">
                     <li style="counter-increment: step-counter;"><strong>Assembly & Testing:</strong>
                         <ul style="margin-top: 10px; margin-left: 20px;">
-                            <li>Insert modules into their respective slots; ensure the sensor probe faces outward.</li>
-                            <li>Power on; move your hand near the sensor – the LED ring should show a rotating colour effect, and the OLED should display "WARNING!!".</li>
-                            <li>Adjust the distance threshold until it meets your demonstration requirements.</li>
+                            <li>Place the ultrasonic sensor, RGB ring light strip and OLED screen separately in designated areas inside the shell. Only the sensor probe, light body and screen panel are exposed through external openings; component bodies are suspended inside the shell instead of being clamped into shell slots;</li>
+                            <li>No-load power-on test: When no objects approach the sensor, the device stays in low-power standby mode. The OLED screen displays normal standby interface and the light strip remains off;</li>
+                            <li>Function trigger test: Slowly move your hand toward the sensor detection area. Check whether the RGB ring light strip plays colorful rotating warning light animations, and whether the WARNING!! anti-collision alert text pops up synchronously on the OLED screen;</li>
+                            <li>Parameter calibration: Repeat tests at different distances and dwell durations, modify distance threshold and timing parameters in code to eliminate false and missed triggers, adapting the device to household table corner scenarios.</li>
                         </ul>
                     </li>
-                    <li style="counter-increment: step-counter;"><strong>Final Fixing:</strong> Use hot glue or double‑sided tape to secure modules inside the shell; close the cover (or use a snap‑fit design).</li>
+                    <li style="counter-increment: step-counter;"><strong>Final Fixing:</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li>After stable function verification, fix each discrete component independently with low-temperature hot melt adhesive and traceless double-sided tape to avoid wire detachment and component displacement caused by device shaking;</li>
+                            <li>Sort all cables, store excess long wires inside shell wiring channels, and separate power wires and signal wires to prevent cable tangling from blocking sensors and light sources;</li>
+                            <li>Fasten the snap-on cover of the shell to fully enclose the whole device;</li>
+                            <li>Aging test of finished product: Keep powered on continuously for 30 minutes, repeat approaching & leaving trigger operations multiple times. The lighting, screen and ranging functions work normally without abnormality, marking the completion of the whole production process.</li>
+                        </ul>
+                    </li>
                 </ol>
             </div>
         </div>
@@ -512,15 +610,58 @@ void colorRotate() {
             </div>
 
             <div class="step-content-block">
-                <p class="detailed-intro">This project directly and indirectly contributes to the following United Nations SDGs:</p>
+                <p class="detailed-intro">This elderly-friendly corner induction anti-collision night light project closely aligns with 3 Sustainable Development Goals and 6 official secondary targets, focusing on elderly home safety, inclusive aging services, and affordable public well-being improvement.</p>
                 
-                <ul class="operation-list">
-                    <li><strong>SDG 3 – Good Health and Well‑being</strong> – Prevents accidental injuries (falls, burns, falls from height) among the elderly, reducing health burdens and healthcare costs, and improving quality of life for older adults.</li>
-                    <li><strong>SDG 9 – Industry, Innovation and Infrastructure</strong> – Promotes inclusive, affordable assistive technology through open‑source hardware and low‑cost innovation, fostering inclusive technological development.</li>
-                    <li><strong>SDG 10 – Reduced Inequalities</strong> – The low‑cost model makes basic home safety monitoring accessible to low‑ and middle‑income families, narrowing the digital and care‑resource gap.</li>
-                    <li><strong>SDG 11 – Sustainable Cities and Communities</strong> – Provides practical smart assistance for community‑based and home‑based elderly care, enhancing age‑friendly and safe neighbourhoods.</li>
-                    <li><strong>SDG 12 – Responsible Consumption and Production</strong> – Uses modular, replaceable electronic components to reduce e‑waste; the 3D‑printed shell uses biodegradable PLA filament, reflecting environmentally conscious design.</li>
-                </ul>
+                <h3 class="content-subtitle" style="margin-top: 30px;">SDG 3 – Good Health and Well-being</h3>
+                
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image999/70-1.jpg" alt="SDG 3" class="step-image">
+                        <p class="image-caption">图片 70-1</p>
+                    </div>
+                </div>
+
+                <h4 class="detail-subtitle">Target 3.4</h4>
+                <p class="detailed-intro">By 2030, reduce by one third premature mortality from non-communicable diseases through prevention and treatment and promote mental health and well-being.</p>
+                <p class="detailed-intro">This product effectively prevents elderly falls, collisions, and secondary physical injuries caused by night wandering. It reduces the risk of fracture, long-term bedridden conditions, and chronic disease deterioration. Meanwhile, soft light induction without harsh alarms avoids emotional stimulation, protecting the mental stability and well-being of elderly users, especially those with mild cognitive impairment.</p>
+
+                <h4 class="detail-subtitle">Target 3.8</h4>
+                <p class="detailed-intro">Achieve universal health coverage, including financial risk protection, access to quality essential health-care services and access to safe, effective, quality and affordable essential medicines and technologies for all.</p>
+                <p class="detailed-intro">The project provides low-cost, accessible home safety protection equipment for ordinary families. Compared with expensive professional elderly monitoring devices, this affordable assistive technology realizes grassroots home health risk prevention, supplements family elderly care protection systems, and supports universal health coverage at the household level.</p>
+
+                <h3 class="content-subtitle" style="margin-top: 30px;">SDG 11 – Sustainable Cities and Communities</h3>
+                
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image999/70-2.jpg" alt="SDG 11" class="step-image">
+                        <p class="image-caption">图片 70-2</p>
+                    </div>
+                </div>
+
+                <h4 class="detail-subtitle">Target 11.2</h4>
+                <p class="detailed-intro">By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, older persons and persons with disabilities.</p>
+                <p class="detailed-intro">Extending safe barrier-free travel scenarios from public roads to indoor home environments, the product eliminates hidden collision dangers at household corners. It optimizes indoor walking safety for elderly and vulnerable groups and builds inclusive indoor "safe mobility" environments suitable for aging populations.</p>
+
+                <h4 class="detail-subtitle">Target 11.3</h4>
+                <p class="detailed-intro">By 2030, enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning and management in all countries.</p>
+                <p class="detailed-intro">The product supports community aging-friendly renovation and residential environment upgrading. It can be popularized in old communities, community elderly care centers and home-based elderly care scenarios, helping cities achieve more inclusive, age-friendly and sustainable urban settlement development.</p>
+
+                <h4 class="detail-subtitle">Target 11.7</h4>
+                <p class="detailed-intro">By 2030, provide universal access to safe, inclusive and accessible, green and public spaces, in particular for women and children, older persons and persons with disabilities.</p>
+                <p class="detailed-intro">The project optimizes private family living spaces and public elderly activity spaces such as day-care centers and nursing homes. It builds safer, barrier-free and inclusive living environments specifically for elderly groups, fulfilling the requirement of equitable and accessible public living spaces for vulnerable groups.</p>
+
+                <h3 class="content-subtitle" style="margin-top: 30px;">SDG 17 – Partnerships for the Goals</h3>
+                
+                <div class="step-images centered">
+                    <div class="image-card">
+                        <img src="image999/70-3.jpg" alt="SDG 17" class="step-image">
+                        <p class="image-caption">图片 70-3</p>
+                    </div>
+                </div>
+
+                <h4 class="detail-subtitle">Target 17.17</h4>
+                <p class="detailed-intro">Encourage and promote effective public, public-private and civil society partnerships, building on the experience and resourcing strategies of partnerships.</p>
+                <p class="detailed-intro">The project adopts a multi-stakeholder promotion model, cooperating with community elderly care stations, rehabilitation institutions (public sectors), e-commerce platforms and content marketing channels (private sectors), and elderly care associations (civil society). The cross-domain partnership mechanism accelerates the popularization of aging-friendly public welfare products and promotes sustainable social elderly care development.</p>
             </div>
         </div>
     </section>
